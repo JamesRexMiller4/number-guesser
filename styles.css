@@ -8,3 +8,35 @@ button font-color: #FFFFFF;
 disabled state button background: #D0D2D3;
 on hover/ click  background: #DD1972;
 Numbers at Results : #F74D9B; */
+/* Header */
+header {
+  display: inline-block;
+  background: #404041;
+  align-items: center;
+  flex-flow: column wrap;
+  position: relative;
+  width: 100%;
+  font-family: 'Open sans', sans-serif;
+}
+h1 {
+  color: #DD1972;
+  font-weight: normal;
+  text-align: center;
+  /* margin-bottom: -4%; */
+}
+
+#second-half-heading {
+  font-weight: lighter;
+}
+
+#sub-header {
+  color: #ffffff;
+  font-weight:lighter;
+  text-align: center;
+}
+
+.lines {
+  text-decoration-line: line-through;
+  letter-spacing: -.01px;
+}
+/* end */

@@ -4,21 +4,22 @@
     <meta charset="utf-8">
      <title>NumberGuesser</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"rel="stylesheet"/>
   </head>
    <body>
      <header>
-      <h1>NUMBER<span>GUESSER</span></h1>
-       <h4>-----ULTIMATE CHALLENGER EDITION------</h4>
+      <h1><strong>NUMBER</strong><span id="second-half-heading">GUESSER</span></h1>
+       <h6 id="sub-header"><span class="lines">--------------</span>ULTIMATE CHALLENGER EDITION<span class="lines">----------------</span></h6>
      </header>
     <main role="main">
       <article>
-        <section class="workingtitle">
+        <section class="range-setting">
           <h2>Set Range</h2>
             <form>
               <label>Min Range</label>
-              <input id="min-range" type="text">
+                <input id="min-range" type="text">
               <label>Max Range</label>
-              <input id="max-range" type="text">
+                <input id="max-range" type="text">
               <button id="update-btn">
                 UPDATE
             </button>
@@ -50,9 +51,10 @@
               </form>
             </section>
           <section class="score">
-            
+
       </section>
       <aside class="cards">
+
       </aside>
     </article>
   </main>
