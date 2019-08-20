@@ -8,3 +8,75 @@ button font-color: #FFFFFF;
 disabled state button background: #D0D2D3;
 on hover/ click  background: #DD1972;
 Numbers at Results : #F74D9B; */
+
+
+/*  Elements */
+
+
+* {
+  font-family: 'Open-Sans', sans-serif;
+}
+
+
+
+main {
+  background: #d1d2d4;
+  display: flex;
+  flex: row nowrap;
+}
+article {
+  background: #d1d2d4;
+  display: flex
+/*   width: 50%;
+  height: 20%; */
+}
+
+section {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /* height: 20%; */
+}
+
+form {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row wrap;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+
+}
+
+input {
+  height: 32px;
+  width: 154px;
+}
+
+button {
+  height: 33px;
+  width: 105px;
+  border-radius: 20px;
+  background-color: #6E6E6E;
+}
+
+#update-btn {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.btnactive {
+  color: #6E6E6E;
+}
