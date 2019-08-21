@@ -17,16 +17,33 @@ header {
   position: relative;
   width: 100%;
   font-family: 'Open sans', sans-serif;
+  font-size: medium;
 }
+.header_container {
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+}
+
 h1 {
   color: #DD1972;
   font-weight: normal;
   text-align: center;
-  /* margin-bottom: -4%; */
+  width: 100%;
+  font-size: -webkit-xxx-large;
 }
 
 #second-half-heading {
   font-weight: lighter;
+}
+
+.sub_header-section {
+  display:flex;
+  width: 100%;
+  margin:auto;
+  align-items:center;
+  justify-content: space-between;
 }
 
 #sub-header {
@@ -35,8 +52,10 @@ h1 {
   text-align: center;
 }
 
-.lines {
-  text-decoration-line: line-through;
-  letter-spacing: -.01px;
+
+.line {
+  height: 1px;
+  background-color: #ffffff;
+  width: 40px;
+  width: 19%;
 }
-/* end */
