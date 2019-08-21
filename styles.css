@@ -8,6 +8,7 @@ button font-color: #FFFFFF;
 disabled state button background: #D0D2D3;
 on hover/ click  background: #DD1972;
 Numbers at Results : #F74D9B; */
+
 /* Header */
 header {
   display: inline-block;
@@ -58,4 +59,111 @@ h1 {
   background-color: #ffffff;
   width: 40px;
   width: 19%;
+
+
+
+/*  Elements */
+
+
+* {
+  font-family: 'Open-Sans', sans-serif;
+}
+
+
+
+main {
+  background: #F7F7F7;
+  display: flex;
+  flex: row nowrap;
+  width: 50%;
+}
+article {
+  background: #ffffff;
+  display: flex;
+  margin: 20px;
+  width: 100%;
+  height: 20%;
+  border: 3px solid;
+  border-color: #d1d2d4;
+}
+
+section {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 20px 20px;
+  height: 114px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+form {
+  /* border: 1px solid black; */
+  margin-top: -10px;
+  padding-right: 20px;
+  width: 100%;
+  /* margin-left: 15px; */
+  display: flex;
+  flex-direction: row wrap;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 0px 0px;
+  /* padding-right: 20px; */
+  width: 90%;
+  /* border: 2px solid red; */
+
+
+}
+
+h3 {
+  color: #616161;
+  font-weight: bold;
+
+}
+
+input {
+  height: 32px;
+  width: 90%;
+  float: right;
+  font-size: 20px;
+}
+
+label {
+  color: #616161;
+  margin-bottom: 5px;
+}
+
+button {
+  height: 40px;
+  width: 40%;
+  border-radius: 20px;
+  background-color: #6E6E6E;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+}
+
+#update-btn {
+  margin-top: 16.5px;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+.btnactive {
+  color: #6E6E6E;
+
 }

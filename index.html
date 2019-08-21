@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
      <title>NumberGuesser</title>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"rel="stylesheet"/>
   </head>
@@ -19,19 +20,27 @@
     </header>
     <main role="main">
       <article>
-        <section class="range-setting">
-          <h2>Set Range</h2>
+        <section class="workingtitle">
+          <h3>Set Range</h3>
             <form>
+              <div>
               <label>Min Range</label>
-                <input id="min-range" type="text">
+
+            
+
+              <input id="min-range" type="text">
+              </div>
+              <div>
               <label>Max Range</label>
-                <input id="max-range" type="text">
+              <input id="max-range" type="text">
+              </div>
+
               <button id="update-btn">
                 UPDATE
             </button>
           </form>
         </section>
-      <section class="naming">
+      <!-- <section class="naming">
         <p>The Current Range is <span>num1</span> to <span>num2</span>
           <form>
             <h5>Challenger 1</h5>
@@ -40,7 +49,7 @@
               <label>Guess</label>
               <input id="challeneger-1-guess" type="text">
           <!-- Maybe 2 forms -->
-            <h5>Challenger 2</h5>
+            <!-- <h5>Challenger 2</h5>
               <label>Name</label>
               <input id="challenger-2-name" type="text">
               <label>Guess</label>
@@ -57,12 +66,10 @@
               </form>
             </section>
           <section class="score">
-
-      </section>
-      <aside class="cards">
-
-      </aside>
-    </article>
+         </section>
+        <aside class="cards">
+        </aside> -->
+     </article>
   </main>
     <script src="main.js">
     </script>
