@@ -11,6 +11,15 @@ Numbers at Results : #F74D9B; */
 
 /* Header */
 
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
 header {
   display: inline-block;
   background: #404041;
@@ -21,6 +30,7 @@ header {
   font-family: 'Open sans', sans-serif;
   font-size: medium;
 }
+
 .header_container {
   display:flex;
   flex-direction: column;
@@ -65,9 +75,8 @@ h1 {
 
 /*  Elements */
 
-
-* {
-  font-family: 'Open-Sans', sans-serif;
+body{
+  margin: 0 auto;
 }
 
 
@@ -76,7 +85,8 @@ main {
   background: #F7F7F7;
   display: flex;
   flex: row nowrap;
-  width: 50%;
+  width: 100%;
+  margin: 0 auto;
 }
 article {
   background: #F7F7F7;
@@ -101,12 +111,14 @@ form {
   width: 100%;
   display: flex;
   flex-direction: row wrap;
+
 }
 
-div {
+.divrange {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
+  margin-left: -5px;
   /* border: 1px solid red; */
 
 }
@@ -114,6 +126,9 @@ div {
 h3 {
   color: #616161;
   font-weight: bold;
+  margin-left: -5px;
+  font-size: 1.5rem;
+  margin-top:-10px;
 
 }
 
@@ -157,22 +172,9 @@ button {
  flex-direction: column;
  padding: 20px;
  width: 93.5%;
- margin-bottom: 10px;
+ /* margin-top: -20px; */
  border: 1px solid;
  border-color: #d1d2d4;
-
-}
-
-/* section {
- background: #ffffff;
- display: flex;
- flex-direction: column;
- padding: 20px;
- /* height: 114px; */
- /* width: 93.5%; */
- /* margin-bottom: 10px; */
- /* border: 1px solid;
- border-color: #d1d2d4; */
 
 }
 
@@ -180,18 +182,41 @@ button {
  background: #ffffff;
  display: flex;
  flex-direction: column;
- padding: 20px;
- /* height: 114px; */
- width: 93.5%;
- margin-bottom: 10px;
- border: 1px solid black;
+ padding: 20px 20px 20px 10px;
+ width: 95%;
+ border: 1px solid;
  border-color: #d1d2d4;
 
 }
+.spacing {
+  margin-bottom: 20px;
+}
 
 .naming p {
+  font-size: 1rem;
+ margin: -2.5% 0px 30px -16px;
  font-weight: 300;
  color: #616161;
+}
+
+.naming h3 {
+  margin-left: -16px;
+}
+
+.guessdiv {
+  /* width: 100%; */
+  /* border: 2px solid red; */
+  margin-top: 5.5px;
+  padding-right: 20px
+}
+
+.guessdiv input {
+  width: 99%;
+  margin-left: 40px;
+}
+
+.guessdiv label {
+  margin-left: 41px;
 }
 
 .numrange {
@@ -199,20 +224,71 @@ button {
   text-decoration: underline;
 }
 
+.backroundcolordiv {
+  background: #ffffff;
+  /* border: 1px solid; */
+  border-color: #d1d2d4;
+  padding: 20px;
+  margin-top: -10px;
+}
+
 .challengediv {
+  /* background: #ffffff; */
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 50px;
+  height: 65px;
   margin-bottom: 40px;
+  /* border: 2px solid black; */
+  margin-left: -15px;
 }
 
-.challenge1 .challenge2 {
+#challenge1 #challenge2 {
   display: flex;
   flex-direction: column;
+  padding-right: 80px;
+  border: 2px solid blue;
+}
 
+  .inchallenge {
+    font-size: 1rem;
+    height: 90%;
+    width: 95%;
+    /* padding-right: 20px; */
+  }
+
+.divbtns {
+  /* border: 2px solid red; */
+  margin: 0 20px -30px -25px;
+  width: 110%;
+
+}
+.divbtns button {
+  margin: 5px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 29%;
+}
+
+.divbtns .submitbtn {
+  width: 35%
+}
 .btnactive {
   color: #6E6E6E;
+}
 
->>>>>>> 931f767ea777f1d9d9d1897664ed3e52c2eec621
+.btninactive {
+  background-color: #D0D2D3;
+}
+
+
+
+
+/* ASIDE */
+
+aside{
+  background-color:#D1D2D4;
+  display: flex;
+  width: 100%;
 }
