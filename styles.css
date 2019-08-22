@@ -15,11 +15,6 @@ Numbers at Results : #F74D9B; */
   font-family: 'Open Sans', sans-serif;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-}
-
 header {
   display: flex;
   background: #404041;
@@ -224,12 +219,7 @@ button {
   margin-left: 41px;
 }
 
-#min-span {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-#max-span {
+.spanstyle {
   font-weight: bold;
   text-decoration: underline;
 }
