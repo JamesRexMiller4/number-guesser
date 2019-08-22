@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
      <title>NumberGuesser</title>
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
   </head>
    <body>
      <header>
@@ -20,56 +19,67 @@
     </header>
     <main role="main">
       <article>
-        <section class="workingtitle">
+        <section class="workingtitle spacing">
           <h3>Set Range</h3>
             <form>
-              <div>
+              <div class="divrange">
               <label>Min Range</label>
-
-            
-
-              <input id="min-range" type="text">
+              <input id="min-range" type="number">
               </div>
-              <div>
+              <div class="divrange">
               <label>Max Range</label>
-              <input id="max-range" type="text">
+              <input id="max-range" type="number">
               </div>
-
               <button id="update-btn">
                 UPDATE
             </button>
           </form>
         </section>
-      <!-- <section class="naming">
-        <p>The Current Range is <span>num1</span> to <span>num2</span>
-          <form>
-            <h5>Challenger 1</h5>
+      <section class="naming spacing">
+        <div class="backroundcolordiv">
+        <p>The Current Range is <span class="numrange">1</span> to <span class="numrange">10</span></p>
+            <h3>Challenger 1</h3>
+            <form id="challenge1">
+              <div class="challengediv">
+                <label>Name</label>
+                <input id="challenger-1-name" class="inchallenge" type="text">
+              </div>
+              <div class="guessdiv">
+                <label>Guess</label>
+                <input id="challeneger-1-guess" type="number">
+              </div>
+            </form>
+          <div>
+            <h3>Challenger 2</h3>
+            <form id="challenge2">
+              <div class="challengediv">
               <label>Name</label>
-              <input id="challenger-1-name" type="text">
+              <input id="challenger-2-name" class="inchallenge" type="text">
+              </div>
+              <div class="guessdiv">
               <label>Guess</label>
-              <input id="challeneger-1-guess" type="text">
-          <!-- Maybe 2 forms -->
-            <!-- <h5>Challenger 2</h5>
-              <label>Name</label>
-              <input id="challenger-2-name" type="text">
-              <label>Guess</label>
-              <input id="challeger-2-guess" type="text">
-                <button id="submit-guess">
-                  Submit Guess
-                </button>
-                <button id="reset-game">
-                  Reset Game
-                </button>
-                <button id="clear-game">
-                  Clear game
-                </button>
-              </form>
-            </section>
+              <input id="challeger-2-guess" type="number">
+              </div>
+            </form>
+          </div>
+          <div class="divbtns">
+            <button id="submit-guess" class="submitbtn">
+              SUBMIT GUESS
+            </button>
+            <button id="reset-game" class="btninactive">
+              RESET GAME
+            </button>
+            <button id="clear-game" class="btninactive">
+              CLEAR GAME
+            </button>
+          </div>
+          </div>
+      </section>
           <section class="score">
-         </section>
+          </section>
+        </article>
         <aside class="cards">
-        </aside> -->
-     </article>
+        </aside>
   </main>
     <script src="main.js">
     </script>
