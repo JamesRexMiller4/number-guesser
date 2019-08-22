@@ -15,11 +15,6 @@ Numbers at Results : #F74D9B; */
   font-family: 'Open Sans', sans-serif;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-}
-
 header {
   display: flex;
   background: #404041;
@@ -154,7 +149,7 @@ button {
   border-radius: 20px;
   background-color: #6E6E6E;
   font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
+  font-size: 100%;
 }
 
 #update-btn {
@@ -224,22 +219,14 @@ button {
   margin-left: 41px;
 }
 
-#min-span {
+.numrange {
   font-weight: bold;
   text-decoration: underline;
 }
 
-#max-span {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.backroundcolordiv {
+.backgroundcolordiv {
   background: #ffffff;
-  /* border: 1px solid; */
-  border-color: #d1d2d4;
   padding: 20px;
-  margin-top: -10px;
 }
 
 .challengediv {
@@ -293,6 +280,40 @@ button {
 }
 
 
+
+.score {
+  border: 1px solid;
+  border-color: #d1d2d4;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.sectionscore{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+}
+
+.divscore {
+  border: 1px solid red;
+}
+
+.challenger1 {
+  margin-right: 20px;
+}
+
+.scorespan {
+  color: #616161;
+  font-weight: bold;
+}
+
+.grayline {
+  /* width: 2px; */
+  height: 200px;
+  border: 1px solid;
+  border-color: #D0D2D3;
+}
 
 
 /* ASIDE */
