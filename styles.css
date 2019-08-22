@@ -28,7 +28,7 @@ header {
   position: relative;
   width: 100%;
   font-family: 'Open sans', sans-serif;
-  font-size: medium;
+
 }
 
 .header_container {
@@ -43,7 +43,8 @@ h1 {
   font-weight: normal;
   text-align: center;
   width: 100%;
-  font-size: -webkit-xxx-large;
+  font-size:;
+  font-weight: 900;
 }
 
 #second-half-heading {
