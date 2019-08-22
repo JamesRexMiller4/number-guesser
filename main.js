@@ -1,3 +1,5 @@
+// Generate random number
+
 var minRange = document.querySelector("#min-range");
 var maxRange = document.querySelector("#max-range");
 var button = document.querySelector('#update-btn');
@@ -11,6 +13,22 @@ function changeString1(minRange){
   return parsed = parseInt(minRange.value);
 }
 
+// Change Min Max Range Span---------------------
+
+var inputmin = document.getElementById('min-range');
+var inputmax = document.getElementById('max-range');
+var minSpan = document.getElementById('min-span');
+var maxSpan = document.getElementById('max-span');
+
+function displayRange() {
+ var minRange = inputmin.value;
+ var maxRange = inputmax.value;
+ minSpan.innerText = minRange;
+ maxSpan.innerText= maxRange;
+ event.preventDefault();
+ });
+
+// ----------------------------
 
 button.addEventListener('click', function getRandomInt(event) {
   event.preventDefault();
