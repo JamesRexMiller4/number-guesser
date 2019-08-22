@@ -26,14 +26,44 @@ function displayRange() {
  minSpan.innerText = minRange;
  maxSpan.innerText= maxRange;
  event.preventDefault();
- });
+
+ };
+
+ function getRandomInt() {
+   event.preventDefault();
+   let randomInt = Math.floor(Math.random() * (changeString1(maxRange) - changeString2(minRange) + 1 )) + changeString2(minRange);
+    console.log(randomInt);
+ };
+
+ // button.addEventListener("click", function() {
+ //   var minRange = inputmin.value;
+ //   var maxRange = inputmax.value;
+ //   minSpan.innerText = minRange;
+ //   maxSpan.innerText= maxRange;
+ //   event.preventDefault();
+ // });
 
 // ----------------------------
 
-button.addEventListener('click', function getRandomInt(event) {
-  event.preventDefault();
-  let randomInt = Math.floor(Math.random()
-   * (changeString1(maxRange) - changeString2(minRange)
-    + 1 )) + changeString2(minRange);
-   console.log(randomInt)
-})
+// function funContainer() {
+//     displayRange();
+//     changeString1();
+//
+
+// }
+
+
+
+button.addEventListener('click', function() {
+        displayRange();
+        getRandomInt();
+
+});
+
+
+// button.addEventListener('click', function getRandomInt(event) {
+//   event.preventDefault();
+//   let randomInt = Math.floor(Math.random() * (changeString1(maxRange) - changeString2(minRange)
+//     + 1 )) + changeString2(minRange);
+//    console.log(randomInt)
+// })
