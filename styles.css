@@ -21,40 +21,45 @@ main {
 }
 
 header {
-  display: inline-block;
+  display: flex;
   background: #404041;
   align-items: center;
   flex-flow: column wrap;
-  position: relative;
   width: 100%;
   font-family: 'Open sans', sans-serif;
-  font-size: medium;
+
 }
 
-.header_container {
+.header-container {
   display:flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 50%;
+  width: fit-content;
 }
 
 h1 {
   color: #DD1972;
-  font-weight: normal;
   text-align: center;
   width: 100%;
-  font-size: -webkit-xxx-large;
+  display: flex;
+  justify-content: center;
+  font-size: 400%;
+  margin: 2% 0% 0% 0%;
+  height: 60px;
+}
+strong {
+  font-weight: 900;
 }
 
 #second-half-heading {
-  font-weight: lighter;
+  font-weight: 300;
 }
 
-.sub_header-section {
-  display:flex;
+.sub-header-section {
+  display: flex;
   width: 100%;
-  margin:auto;
-  align-items:center;
+  margin: 0%;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -69,7 +74,7 @@ h1 {
   height: 1px;
   background-color: #ffffff;
   width: 40px;
-  width: 19%;
+  width: 27%;
 }
 
 
@@ -149,7 +154,7 @@ button {
   border-radius: 20px;
   background-color: #6E6E6E;
   font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
+  font-size: 100%;
 }
 
 #update-btn {
@@ -219,17 +224,19 @@ button {
   margin-left: 41px;
 }
 
-.numrange {
+#min-span {
   font-weight: bold;
   text-decoration: underline;
 }
 
-.backroundcolordiv {
+#max-span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.backgroundcolordiv {
   background: #ffffff;
-  /* border: 1px solid; */
-  border-color: #d1d2d4;
   padding: 20px;
-  margin-top: -10px;
 }
 
 .challengediv {
@@ -283,6 +290,48 @@ button {
 }
 
 
+
+.score {
+  border: 1px solid;
+  border-color: #d1d2d4;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.sectionscore{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+
+
+/* ASIDE */
+
+aside{
+  background-color:#D1D2D4;
+  display: flex;
+  width: 100%;
+}
+
+.divscore {
+  border: 1px solid red;
+}
+
+.challenger1 {
+  margin-right: 20px;
+}
+
+.scorespan {
+  color: #616161;
+  font-weight: bold;
+}
+
+.grayline {
+  /* width: 2px; */
+  height: 200px;
+  border: 1px solid;
+  border-color: #D0D2D3;
+}
 
 
 /* ASIDE */

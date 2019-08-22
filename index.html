@@ -4,13 +4,13 @@
     <meta charset="utf-8">
      <title>NumberGuesser</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
   </head>
    <body>
      <header>
-       <container class="header_container">
+       <container class="header-container">
          <h1><strong>NUMBER</strong><span id="second-half-heading">GUESSER</span></h1>
-          <section class="sub_header-section">
+          <section class="sub-header-section">
            <div class="line"></div>
            <p id="sub-header">ULTIMATE CHALLENGER EDITION</p>
            <div class="line"></div>
@@ -37,7 +37,7 @@
         </section>
       <section class="naming spacing">
         <div class="backroundcolordiv">
-        <p>The Current Range is <span class="numrange">1</span> to <span class="numrange">10</span></p>
+        <p>The Current Range is <span id="min-span">1</span> to <span id="max-span">10</span></p>
             <h3>Challenger 1</h3>
             <form id="challenge1">
               <div class="challengediv">
@@ -76,12 +76,27 @@
           </div>
       </section>
           <section class="score">
+            <div class="backgroundcolordiv">
+            <h3>Latest Score</h3>
+            <section class="sectionscore">
+            <div class="challenger1 divscore">
+              <span id="challenger-1-name" class="scorespan">Challenger 1 Name</span>
+              <p>current guess</p>
+              <p id="howclose">that's too high</p>
+            </div>
+            <div class="grayline"> </div>
+            <div class="challenger2 divscore">
+              <span id="challeneger-2-name" class="scorespan">Challenger 2 Name</span>
+              <p>current guess</p>
+              <p id="howclose">that's too low</p>
+            </div>
+            </section>
+            </div>
           </section>
         </article>
         <aside class="cards">
         </aside>
   </main>
-    <script src="main.js">
-    </script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
