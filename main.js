@@ -23,6 +23,7 @@ function displayRange() {
  minSpan.innerText = minRange;
  maxSpan.innerText= maxRange;
  event.preventDefault();
+
  };
 
  function getRandomInt() {
