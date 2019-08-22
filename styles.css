@@ -224,7 +224,12 @@ button {
   margin-left: 41px;
 }
 
-.numrange {
+#min-span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#max-span {
   font-weight: bold;
   text-decoration: underline;
 }
