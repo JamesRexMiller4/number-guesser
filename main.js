@@ -38,3 +38,66 @@ button.addEventListener('click', function() {
         getRandomInt();
 
 });
+
+// Display Name and Guess in Score Section
+
+var grabName1 = document.getElementById('player1name')
+var grabName2 = document.getElementById('player2name')
+var grabGuess1 = document.getElementById('player1guess')
+var grabGuess2 = document.getElementById('player2guess')
+
+var grabNameSpan1 = document.getElementById('challenger-1-name')
+var grabNameSpan2 = document.getElementById('challenger-2-name')
+var grabGuessP1= document.getElementById('guess1card')
+var grabGuessP2= document.getElementById('guess2card')
+
+
+function changeName() {
+    card1name = grabName1.value;
+    card2name = grabName2.value;
+    grabNameSpan1.innerHTML = card1name;
+    grabNameSpan2.innerHTML = card2name;
+}
+
+function changeGuess() {
+    card1guess = grabGuess1.value
+    card2guess = grabGuess2.value
+    grabGuessP1.innerHTML = card1guess
+    grabGuessP2.innerHTML = card2guess
+}
+
+var guessbtn = document.getElementById('submit-guess')
+
+
+guessbtn.addEventListener('click', function() {
+      changeName();
+      changeGuess();
+})
+
+
+
+
+// Reset Forms
+
+
+var resetbtn = document.getElementById('reset-game')
+
+function resetGame() {
+      document.getElementById('challenge1').reset();
+      document.getElementById('challenge2').reset();
+      document.getElementById('rangeform').reset();
+}
+
+resetbtn.addEventListener('click', function(){
+      resetGame();
+});
+
+
+// Reset Guess
+
+var clearbtn = document.getElementById('clear-game')
+
+clearbtn.addEventListener('click', function() {
+      grabGuess1.value = '';
+      grabGuess2.value = '';
+})

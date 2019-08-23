@@ -4,12 +4,13 @@
     <meta charset="utf-8">
      <title>NumberGuesser</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
   </head>
    <body>
      <header>
        <container class="header-container">
-         <h1><strong>NUMBER</strong><span id="second-half-heading">GUESSER</span></h1>
+         <h1>NUMBER<span id="second-half-heading">GUESSER</span></h1>
           <section class="sub-header-section">
            <div class="line"></div>
            <p id="sub-header">ULTIMATE CHALLENGER EDITION</p>
@@ -21,7 +22,7 @@
       <article>
         <section class="workingtitle spacing">
           <h3>Set Range</h3>
-            <form>
+            <form id="rangeform">
               <div class="divrange">
               <label>Min Range</label>
               <input id="min-range" type="number">
@@ -42,11 +43,11 @@
             <form id="challenge1">
               <div class="challengediv">
                 <label>Name</label>
-                <input id="challenger-1-name" class="inchallenge" type="text">
+                <input id="player1name" class="inchallenge" type="text">
               </div>
               <div class="guessdiv">
                 <label>Guess</label>
-                <input id="challeneger-1-guess" type="number">
+                <input id="player1guess" type="number">
               </div>
             </form>
           <div>
@@ -54,11 +55,11 @@
             <form id="challenge2">
               <div class="challengediv">
               <label>Name</label>
-              <input id="challenger-2-name" class="inchallenge" type="text">
+              <input id="player2name" class="inchallenge" type="text">
               </div>
               <div class="guessdiv">
               <label>Guess</label>
-              <input id="challeger-2-guess" type="number">
+              <input id="player2guess" type="number">
               </div>
             </form>
           </div>
@@ -77,19 +78,21 @@
       </section>
           <section class="score">
             <div class="backgroundcolordiv">
-            <h3>Latest Score</h3>
             <section class="sectionscore">
+          <div class="scorediv">
+            <h3>Latest Score</h3>
             <div class="challenger1 divscore">
               <span id="challenger-1-name" class="scorespan">Challenger 1 Name</span>
-              <p>current guess</p>
-              <p class="guessdisplay">4</p>
+              <p class="currentp">current guess</p>
+              <p class"guessdisplay" id="guess1card">4</p>
               <p id="howclose">that's too high</p>
             </div>
+          </div>
             <div class="grayline"> </div>
             <div class="challenger2 divscore">
-              <span id="challeneger-2-name" class="scorespan">Challenger 2 Name</span>
-              <p>current guess</p>
-              <p id="guessdisplay">20</p>
+              <span id="challenger-2-name" class="scorespan">Challenger 2 Name</span>
+              <p class="currentp">current guess</p>
+              <p class="guessdisplay" id="guess2card">20</p>
               <p id="howclose">that's too low</p>
             </div>
             </section>
