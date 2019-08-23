@@ -39,11 +39,9 @@ h1 {
   display: flex;
   justify-content: center;
   font-size: 400%;
+  font-weight: 800;
   margin: 2% 0% 0% 0%;
   height: 60px;
-}
-strong {
-  font-weight: 900;
 }
 
 #second-half-heading {
@@ -77,16 +75,30 @@ strong {
 
 body{
   margin: 0 auto;
+
+}
+
+.wrapper {
+  display: flex;
 }
 
 
-
-main {
+.mainleft {
   background: #F7F7F7;
   display: flex;
   flex: row nowrap;
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
+}
+
+.mainright {
+  background: #D1D2D4;
+  display: flex;
+  flex: row nowrap;
+  width: 50%;
+  margin: 0 auto;
+  border-left: 2px solid;
+  border-color: #aaaaaa;
 }
 article {
   background: #F7F7F7;
@@ -258,18 +270,19 @@ button {
   /* border: 2px solid red; */
   margin: 0 20px -30px -25px;
   width: 110%;
+  display: flex;
+  justify-content: space-around;
 
 }
 .divbtns button {
-  margin: 5px;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 130%;
   font-weight: bold;
   width: 29%;
 }
 
 .divbtns .submitbtn {
-  width: 35%
+  width: 32%
 }
 .btnactive {
   color: #6E6E6E;
@@ -277,6 +290,10 @@ button {
 
 .btninactive {
   background-color: #D0D2D3;
+}
+
+button:hover {
+  background-color: #DD1972;
 }
 
 
@@ -296,30 +313,163 @@ button {
 }
 
 .divscore {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.challenger1 {
-  margin-right: 20px;
+.divscore p {
+  font-weight: 300;
+  color: #aeb1b2;
 }
 
 .scorespan {
-  color: #616161;
+  color: #7f7f7f;
   font-weight: bold;
+  font-size: 130%;
 }
 
 .grayline {
   /* width: 2px; */
-  height: 200px;
+  height: 220px;
   border: 1px solid;
   border-color: #D0D2D3;
 }
 
-
-/* ASIDE */
-
-aside{
-  background-color:#D1D2D4;
+.challenger1 {
+  margin-top: -10px;
+}
+.challenger2 {
+  margin-top: 37.5px;
+}
+.scorediv {
   display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.scorediv h3 {
+  text-align: left;
+  /* border: 2px solid red; */
+  margin-left: -40px;
+}
+
+.currentp {
+  margin-top: -3px;
+  font-size: 120%;
+  color: #d0d2d3;
+}
+
+#guess1card {
+  margin: -30px 0px;
+  font-size: 500%;
+  color: #F74D9B;
+  font-weight: 800;
+}
+
+#guess2card {
+  margin: -30px 0px;
+  font-size: 500%;
+  color: #F74D9B;
+  font-weight: 800;
+}
+
+#howclose {
+  font-size: 150%;
+  color: #a6a6aa;
+}
+
+.cards {
+  /* border: 2px solid black; */
+  margin: 0 auto;
   width: 100%;
+  background: #D1D2D4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#winnercard {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 85%;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #aaaaaa;
+  /* justify-content: center; */
+/* justify-content: flex-end; */
+  align-content: space-around;
+  /* background-color: #ffffff; */
+  /* padding: 20px; */
+}
+
+.cardheader {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+  justify-content: space-around;
+  align-items: baseline;
+  /* margin-bottom: 40px; */
+}
+
+.vs {
+  /* margin-bottom: 90px; */
+  font-size: 1.1rem;
+ font-weight: 300;
+ color: #616161;
+}
+
+#chall1name {
+  margin-left: 10px;
+  color: #72727a;
+  font-size: 110%;
+}
+
+#chall2name {
+  margin-left: 10px;
+  color: #72727a;
+  font-size: 110%;
+}
+
+.grayhorizonline {
+  width: 100%;
+  border: 1px solid;
+  border-color: #D0D2D3;
+}
+
+.top {
+  margin-top: -10px;
+
+}
+
+.centercardname {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 170%;
+}
+
+.bottom {
+  margin-bottom: -30px;
+
+}
+
+.cardfooter {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: -10px;
+  align-items: baseline;
+}
+
+.cardfooter p {
+  margin-left: -20px;
+}
+
+#exitbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
 }
