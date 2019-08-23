@@ -5,7 +5,6 @@
      <title>NumberGuesser</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-
   </head>
    <body>
      <header>
@@ -18,7 +17,8 @@
          </section>
        </container>
     </header>
-    <main role="main">
+    <div class="wrapper">
+    <main role="main" class="mainleft">
       <article>
         <section class="workingtitle spacing">
           <h3>Set Range</h3>
@@ -99,9 +99,29 @@
             </div>
           </section>
         </article>
-        <aside class="cards">
-        </aside>
+      </main>
+      <main class="mainright">
+        <article class="cards">
+          <section id=winnercard class="sectionaside">
+            <div class="backgroundcolordiv">
+            <div class='cardheader'>
+            <h3 id='chall1name'>CHALLENGER 1 NAME</h3><span class="vs">vs</span><h3 id='chall2name'>CHALLENGER 2 NAME</h3>
+            </div>
+            <div class="grayhorizonline top"> </div>
+            <div class="centercardname">
+            <h2 id="winnernamecard" class="cardnameWin">Challenger 1 Name</h2>
+            <h3>Winner</h3>
+            </div>
+            <div class="grayhorizonline bottom"> </div>
+            <div class="cardfooter">
+            <span id="spannumofGuess">20</span><p>GUESSES</p><span id="spanTimetoWin">20</span><p>MINUTES</p>
+            <button id="exitbtn">X</button>
+            </div>
+          </div>
+          </section>
+      </article>
   </main>
+</div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
