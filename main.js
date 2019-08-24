@@ -106,4 +106,17 @@ function guessHint() {
 
 	if (card2guess > randomInt) {
     guesshint2.innerHTML = "That's too high";
-  } else guesshint2.innerHTML = "That's too low";
+	} else guesshint2.innerHTML = "That's too low";
+	
+	if (card1guess == randomInt) {
+    guesshint1.innerHTML = "BOOM!";
+    guesshint2.innerHTML = "Loser!";
+  } else if (card2guess == randomInt) {
+    guesshint2.innerHTML = "BOOM!";
+    guesshint1.innerHTML = "Loser!";
+  } else if (card1guess == card2guess && card1guess == randomInt) {
+    guesshint2.innerHTML = "TIE!";
+    guesshint1.innerHTML = "TIE!";
+  }
+		else return
+}
