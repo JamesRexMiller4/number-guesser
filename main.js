@@ -120,3 +120,9 @@ function guessHint() {
   }
 		else return
 }
+
+var vs1 = document.getElementById('chall1name');
+var vs2 = document.getElementById('chall2name');
+var winnername = document.getElementById('winnernamecard');
+var guesshint1 = document.getElementById('howclose1');
+var guesshint2 = document.getElementById('howclose2');
