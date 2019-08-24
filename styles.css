@@ -375,7 +375,7 @@ button:hover {
   font-weight: 800;
 }
 
-#howclose {
+.closedisplay {
   font-size: 150%;
   color: #a6a6aa;
 }
@@ -390,7 +390,7 @@ button:hover {
   align-items: center;
 }
 
-#winnercard {
+.winnercard {
   display: flex;
   flex-flow: column nowrap;
   width: 85%;
