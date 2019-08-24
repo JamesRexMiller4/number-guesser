@@ -132,3 +132,7 @@ function checkGuess() {
 	if (card1guess == card2guess && card1guess == randomInt) {
 		alert("It's a TIE! Reset the game to play again");
 		return
+	} else if (card1guess == randomInt && card2guess != randomInt) {
+		winnername.innerHTML = grabName1.value
+		vs1.innerHTML = grabName1.value
+		vs2.innerHTML = grabName2.value
