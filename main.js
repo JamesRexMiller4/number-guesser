@@ -148,3 +148,11 @@ function konamiCode() {
     alert("Don't Panic :) ")
   } else return
 }
+
+guessbtn.addEventListener('click', function() {
+	changeName();
+	changeGuess();
+	checkGuess();
+	guessHint();
+	konamiCode();
+})
