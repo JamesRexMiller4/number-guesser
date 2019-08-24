@@ -136,3 +136,9 @@ function checkGuess() {
 		winnername.innerHTML = grabName1.value
 		vs1.innerHTML = grabName1.value
 		vs2.innerHTML = grabName2.value
+	} else if (card2guess == randomInt && card1guess != randomInt) {
+		winnername.innerHTML = grabName2.value
+		vs1.innerHTML = grabName1.value
+		vs2.innerHTML = grabName2.value
+	} else return
+}
