@@ -79,7 +79,9 @@ var resetbtn = document.getElementById('reset-game')
 function resetGame() {
       document.getElementById('challenge1').reset();
       document.getElementById('challenge2').reset();
-      document.getElementById('rangeform').reset();
+			document.getElementById('rangeform').reset();
+			minSpan.innerText = "";
+      maxSpan.innerText= "";
 }
 
 resetbtn.addEventListener('click', function(){
@@ -95,3 +97,9 @@ clearbtn.addEventListener('click', function() {
       grabGuess1.value = '';
       grabGuess2.value = '';
 })
+
+function guessHint() {
+
+  if (card1guess > randomInt) {
+    guesshint1.innerHTML = "That's too high";
+  } else guesshint1.innerHTML = "That's too low";
