@@ -1,31 +1,35 @@
 var minRange = document.querySelector("#min-range");
 var maxRange = document.querySelector("#max-range");
 var button = document.querySelector('#update-btn');
-var minSpan = document.getElementById('min-span');
-var maxSpan = document.getElementById('max-span');
 
-function changeStringToInt(inputField){
-  return parsed = parseInt(inputField.value);
+
+function changeString2(maxRange){
+  return parsed = parseInt(maxRange.value);
+}
+
+function changeString1(minRange){
+  return parsed = parseInt(minRange.value);
 }
 
 //
 // var inputmin = document.getElementById('min-range');
 // var inputmax = document.getElementById('max-range');
+var minSpan = document.getElementById('min-span');
+var maxSpan = document.getElementById('max-span');
 
 function displayRange() {
-	var spanmin = minRange.value;
-	var spanmax = maxRange.value;
-  minSpan.innerText = spanmin;
-  maxSpan.innerText= spanmax;
-  event.preventDefault();
+ var spanmin = minRange.value;
+ var spanmax = maxRange.value;
+ minSpan.innerText = spanmin;
+ maxSpan.innerText= spanmax;
+ event.preventDefault();
  };
 
-function getRandomInt() {
-	event.preventDefault();
-	let randomInt = Math.floor(Math.random() 
-	* (changeStringToInt(maxRange) - changeStringToInt(minRange) + 1 )) + changeStringToInt(minRange);
-	console.log(randomInt);
-};
+ function getRandomInt() {
+   event.preventDefault();
+   randomInt = Math.floor(Math.random() * (changeString1(maxRange) - changeString2(minRange) + 1 )) + changeString2(minRange);
+    console.log(randomInt);
+ };
 
 
 
@@ -49,8 +53,10 @@ var grabGuessP2= document.getElementById('guess2card')
 
 
 function changeName() {
-    grabNameSpan1.innerHTML = grabName1.value;
-    grabNameSpan2.innerHTML =grabName2.value;
+    card1name = grabName1.value;
+    card2name = grabName2.value;
+    grabNameSpan1.innerHTML = card1name;
+    grabNameSpan2.innerHTML = card2name;
 }
 
 function changeGuess() {
@@ -60,12 +66,35 @@ function changeGuess() {
     grabGuessP2.innerHTML = card2guess
 }
 
+// var changecardresult = document.getElementById('result')
+var plyr1vs = document.getElementById('chall1name');
+var plyr2vs = document.getElementById('chall2name');
+var winnername = document.getElementById('winnernamecard');
+var guesshint1 = document.getElementById('howclose1');
+var guesshint2 = document.getElementById('howclose2');
+
+// function guessHint() {
+//   // card1guess = grabGuess1.value
+//   // card2guess = grabGuess2.value
+//   //
+//   if (card1guess > randomInt) {
+//     guesshint1.innerHTML = "That's too high";
+//   } else guesshint1.innerHTML = "That's too low";
+//
+//   if (card2guess.value > randomInt) {
+//     guesshint2.innerHTML = "That's too high"
+//   } else guesshint2.innerHTML = "That's too low"
+//
+// }
+
 var guessbtn = document.getElementById('submit-guess')
 
 
 guessbtn.addEventListener('click', function() {
       changeName();
       changeGuess();
+      checkGuess();
+      // guessHint();
 })
 
 
@@ -79,8 +108,8 @@ var resetbtn = document.getElementById('reset-game')
 function resetGame() {
       document.getElementById('challenge1').reset();
       document.getElementById('challenge2').reset();
-			document.getElementById('rangeform').reset();
-			minSpan.innerText = "";
+      document.getElementById('rangeform').reset();
+      minSpan.innerText = "";
       maxSpan.innerText= "";
 }
 
@@ -104,11 +133,11 @@ function guessHint() {
     guesshint1.innerHTML = "That's too high";
   } else guesshint1.innerHTML = "That's too low";
 
-	if (card2guess > randomInt) {
+  if (card2guess > randomInt) {
     guesshint2.innerHTML = "That's too high";
-	} else guesshint2.innerHTML = "That's too low";
-	
-	if (card1guess == randomInt) {
+  } else guesshint2.innerHTML = "That's too low";
+
+  if (card1guess == randomInt) {
     guesshint1.innerHTML = "BOOM!";
     guesshint2.innerHTML = "Loser!";
   } else if (card2guess == randomInt) {
@@ -118,7 +147,7 @@ function guessHint() {
     guesshint2.innerHTML = "TIE!";
     guesshint1.innerHTML = "TIE!";
   }
-		else return
+    else return
 }
 
 var vs1 = document.getElementById('chall1name');
@@ -129,19 +158,20 @@ var guesshint2 = document.getElementById('howclose2');
 
 function checkGuess() {
 
-	if (card1guess == card2guess && card1guess == randomInt) {
-		alert("It's a TIE! Reset the game to play again");
-		return
-	} else if (card1guess == randomInt && card2guess != randomInt) {
-		winnername.innerHTML = grabName1.value
-		vs1.innerHTML = grabName1.value
-		vs2.innerHTML = grabName2.value
-	} else if (card2guess == randomInt && card1guess != randomInt) {
-		winnername.innerHTML = grabName2.value
-		vs1.innerHTML = grabName1.value
-		vs2.innerHTML = grabName2.value
-	} else return
+    if (card1guess == card2guess && card1guess == randomInt) {
+      alert("It's a TIE! Reset the game to play again");
+      return
+    } else if (card1guess == randomInt && card2guess != randomInt) {
+      winnername.innerHTML = grabName1.value
+      vs1.innerHTML = grabName1.value
+      vs2.innerHTML = grabName2.value
+    } else if (card2guess == randomInt && card1guess != randomInt) {
+      winnername.innerHTML = grabName2.value
+      vs1.innerHTML = grabName1.value
+      vs2.innerHTML = grabName2.value
+    } else return
 }
+
 
 function konamiCode() {
   if (card1guess == card2guess && card1guess == 42) {
@@ -149,10 +179,13 @@ function konamiCode() {
   } else return
 }
 
+var guessbtn = document.getElementById('submit-guess')
+
+
 guessbtn.addEventListener('click', function() {
-	changeName();
-	changeGuess();
-	checkGuess();
-	guessHint();
-	konamiCode();
+      changeName();
+      changeGuess();
+      checkGuess();
+      guessHint();
+      konamiCode();
 })
