@@ -1,35 +1,31 @@
 var minRange = document.querySelector("#min-range");
 var maxRange = document.querySelector("#max-range");
 var button = document.querySelector('#update-btn');
+var minSpan = document.getElementById('min-span');
+var maxSpan = document.getElementById('max-span');
 
-
-function changeString2(maxRange){
-  return parsed = parseInt(maxRange.value);
-}
-
-function changeString1(minRange){
-  return parsed = parseInt(minRange.value);
+function changeStringToInt(inputField){
+  return parsed = parseInt(inputField.value);
 }
 
 //
 // var inputmin = document.getElementById('min-range');
 // var inputmax = document.getElementById('max-range');
-var minSpan = document.getElementById('min-span');
-var maxSpan = document.getElementById('max-span');
 
 function displayRange() {
- var spanmin = minRange.value;
- var spanmax = maxRange.value;
- minSpan.innerText = spanmin;
- maxSpan.innerText= spanmax;
- event.preventDefault();
+	var spanmin = minRange.value;
+	var spanmax = maxRange.value;
+  minSpan.innerText = spanmin;
+  maxSpan.innerText= spanmax;
+  event.preventDefault();
  };
 
- function getRandomInt() {
-   event.preventDefault();
-   let randomInt = Math.floor(Math.random() * (changeString1(maxRange) - changeString2(minRange) + 1 )) + changeString2(minRange);
-    console.log(randomInt);
- };
+function getRandomInt() {
+	event.preventDefault();
+	let randomInt = Math.floor(Math.random() 
+	* (changeStringToInt(maxRange) - changeStringToInt(minRange) + 1 )) + changeStringToInt(minRange);
+	console.log(randomInt);
+};
 
 
 
@@ -53,10 +49,8 @@ var grabGuessP2= document.getElementById('guess2card')
 
 
 function changeName() {
-    card1name = grabName1.value;
-    card2name = grabName2.value;
-    grabNameSpan1.innerHTML = card1name;
-    grabNameSpan2.innerHTML = card2name;
+    grabNameSpan1.innerHTML = grabName1.value;
+    grabNameSpan2.innerHTML =grabName2.value;
 }
 
 function changeGuess() {

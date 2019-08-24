@@ -310,14 +310,6 @@ button:hover {
   flex-flow: row nowrap;
   justify-content: space-around;
 
-
-
-/* ASIDE */
-
-aside{
-  background-color:#D1D2D4;
-  display: flex;
-  width: 100%;
 }
 
 .divscore {
