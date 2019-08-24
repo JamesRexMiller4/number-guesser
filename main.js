@@ -103,3 +103,7 @@ function guessHint() {
   if (card1guess > randomInt) {
     guesshint1.innerHTML = "That's too high";
   } else guesshint1.innerHTML = "That's too low";
+
+	if (card2guess > randomInt) {
+    guesshint2.innerHTML = "That's too high";
+  } else guesshint2.innerHTML = "That's too low";
