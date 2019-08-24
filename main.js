@@ -126,3 +126,9 @@ var vs2 = document.getElementById('chall2name');
 var winnername = document.getElementById('winnernamecard');
 var guesshint1 = document.getElementById('howclose1');
 var guesshint2 = document.getElementById('howclose2');
+
+function checkGuess() {
+
+	if (card1guess == card2guess && card1guess == randomInt) {
+		alert("It's a TIE! Reset the game to play again");
+		return
