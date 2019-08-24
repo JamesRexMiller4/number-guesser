@@ -114,6 +114,15 @@ function resetGame() {
 }
 
 resetbtn.addEventListener('click', function(){
+      document.getElementById('challenge1').reset();
+      document.getElementById('challenge2').reset();
+      guesshint1.innerHTML = "";
+      guesshint2.innerHTML = "";
+      grabNameSpan1.innerHTML = "Challenger 1";
+      grabNameSpan2.innerHTML = "Challenger 2";
+      grabGuessP1.innerHTML = '-';
+      grabGuessP2.innerHTML = '-';
+      getRandomInt();
       resetGame();
 });
 
