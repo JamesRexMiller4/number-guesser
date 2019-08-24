@@ -142,3 +142,9 @@ function checkGuess() {
 		vs2.innerHTML = grabName2.value
 	} else return
 }
+
+function konamiCode() {
+  if (card1guess == card2guess && card1guess == 42) {
+    alert("Don't Panic :) ")
+  } else return
+}
