@@ -187,18 +187,21 @@ var guesshint2 = document.getElementById('howclose2');
 function checkGuess() {
 
     if (card1guess == card2guess && card1guess == randomInt) {
-      alert("It's a TIE! Reset the game to play again");
-      return
-    } else if (card1guess == randomInt && card2guess != randomInt) {
-      winnername.innerHTML = grabName1.value
-      vs1.innerHTML = grabName1.value
-      vs2.innerHTML = grabName2.value
-    } else if (card2guess == randomInt && card1guess != randomInt) {
-      winnername.innerHTML = grabName2.value
-      vs1.innerHTML = grabName1.value
-      vs2.innerHTML = grabName2.value
-    } else return
-}
+    guesshint2.innerHTML = "TIE!";
+    guesshint1.innerHTML = "TIE!";
+    alert("It's a TIE! Reset the game to play again");
+    event.stopImmediatePropagation();
+    return
+  } else if (card1guess == randomInt && card2guess != randomInt) {
+    winnername.innerHTML = grabName1.value
+    vs1.innerHTML = grabName1.value
+    vs2.innerHTML = grabName2.value
+  } else if (card2guess == randomInt && card1guess != randomInt) {
+    winnername.innerHTML = grabName2.value
+    vs1.innerHTML = grabName1.value
+    vs2.innerHTML = grabName2.value
+  } else return
+  }
 
 
 function konamiCode() {
@@ -217,3 +220,96 @@ guessbtn.addEventListener('click', function() {
       guessHint();
       konamiCode();
 })
+function forthosewhoseek() {
+
+
+//
+//
+//
+// -\-
+// \-- \-
+//  \  - -\
+//   \      \\
+//    \       \
+//     \       \\
+//      \        \\
+//      \          \\
+//      \           \\\
+//       \            \\
+//        \            \\
+//        \. .          \\
+//         \    .       \\
+//          \      .    \\
+//           \       .  \\
+//           \         . \\
+//           \            <=)
+//           \            <==)
+//           \            <=)
+//            \           .\\                                           _-
+//            \         .   \\                                        _-//
+//            \       .     \\                                     _-_/ /
+//            \ . . .        \\                                 _--_/ _/
+//             \              \\                              _- _/ _/
+//             \               \\                      ___-(O) _/ _/
+//             \                \                  __--  __   /_ /      ***********************************
+//             \                 \\          ____--__----  /    \_    https://www.youtube.com/watch?v=4a1_GVRtme0
+//              \                  \\       -------       /   \_  \_    ***********************************
+//               \                   \                  //   // \__ \_
+//                \                   \\              //   //      \_ \_
+//                 \                   \\          ///   //          \__-
+//                 \                -   \\/////////    //
+//                 \            -         \_         //
+//                 /        -                      //
+//                /     -                       ///
+//               /   -                       //
+//          __--/                         ///
+// __________/                            // |
+// //-_________      ___                ////  |
+//     ____\__--/                /////    |
+// -----______    -/---________////        |
+//  _______/  --/    \                   |
+// /_________-/       \                   |
+// //                  \                   /
+//                    \.                 /
+//                    \     .            /
+//                     \       .        /
+//                    \\           .    /
+//                     \                /
+//                     \              __|
+//                     \              ==/
+//                     /              //
+//                     /          .  //
+//                     /   .  .    //
+//                    /.           /
+//                   /            //
+//                   /           /
+//                  /          //
+//                 /         //
+//              --/         /
+//             /          //
+//         ////         //
+//      ///_________////
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("073 102 032 121 111 117 032 104 097 118 101 032 109 097 100 101 032 105 116 032 116 104 105 115 032 102 097 114 032 116 104 101 110 032 073 032 099 111 110 103 114 097 116 117 108 097 116 101 032 121 111 117 046 032 083 111 109 101 032 097 110 115 119 101 114 115 032 111 110 108 121 032 114 101 118 101 097 108 032 116 104 101 109 115 101 108 118 101 115 032 119 104 101 110 032 121 111 117 032 097 115 107 032 116 104 101 032 114 105 103 104 116 032 113 117 101 115 116 105 111 110 046 032 084 104 117 115 044 032 100 105 118 101 032 100 101 101 112 032 105 110 116 111 032 116 104 101 032 114 097 098 098 105 116 032 104 111 108 101 115 046 046 046 032 097 110 100 032 110 101 118 101 114 032 115 116 111 112 032 097 115 107 105 110 103 032 113 117 101 115 116 105 111 110 115 046")
+}
