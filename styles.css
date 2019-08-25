@@ -380,9 +380,19 @@ button:hover {
   color: #a6a6aa;
 }
 
+.mainright {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+  /* margin-left: 20px; */
+}
+
 .cards {
   /* border: 2px solid black; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 100%;
   background: #D1D2D4;
   display: flex;
@@ -472,4 +482,20 @@ button:hover {
   height: 40px;
   border-radius: 50%;
   color: #ffffff;
+}
+
+#secret {
+  cursor: crosshair;
+  font-size: 10px;
+  color: red;
+  width: 100px;
+  height: 20px;
+}
+
+#secret:hover {
+  background-color: royalblue;
+}
+
+.disappear {
+  visibility: hidden;
 }

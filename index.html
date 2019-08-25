@@ -22,14 +22,15 @@
       <article>
         <section class="workingtitle spacing">
           <h3>Set Range</h3>
-            <form id="rangeform">
+            <form id="rangeform" autocomplete="off">
               <div class="divrange">
               <label>Min Range</label>
               <input id="min-range" type="number">
               </div>
               <div class="divrange">
               <label>Max Range</label>
-              <input id="max-range" type="number">
+              <input id="max-range" type="number"
+              onfocus="">
               </div>
               <button id="update-btn">
                 UPDATE
@@ -40,26 +41,28 @@
         <div class="backgroundcolordiv">
         <p>The Current Range is <span id="min-span" class="spanstyle"></span> to <span class="spanstyle"id="max-span"></span></p>
             <h3>Challenger 1</h3>
-            <form id="challenge1">
+            <form id="challenge1" autocomplete="off">
               <div class="challengediv">
                 <label>Name</label>
-                <input id="player1name" class="inchallenge" type="text">
+                <input id="player1name" class="inchallenge" type="text" maxlength="12"
+                onkeydown="return /[0-9a-zA-Z]/i.test(event.key)">
               </div>
               <div class="guessdiv">
                 <label>Guess</label>
-                <input id="player1guess" type="number">
+                <input id="player1guess" type="number" min="" max="">
               </div>
             </form>
           <div>
             <h3>Challenger 2</h3>
-            <form id="challenge2">
+            <form id="challenge2" autocomplete="off">
               <div class="challengediv">
               <label>Name</label>
-              <input id="player2name" class="inchallenge" type="text">
+              <input id="player2name" class="inchallenge" type="text" maxlength="12"
+              onkeydown="return /[0-9a-zA-Z]/i.test(event.key)">
               </div>
               <div class="guessdiv">
               <label>Guess</label>
-              <input id="player2guess" type="number">
+              <input id="player2guess" type="number" min="" max="">
               </div>
             </form>
           </div>
@@ -76,7 +79,7 @@
           </div>
           </div>
       </section>
-          <section class="score">
+          <section class="score" id="foo1">
             <div class="backgroundcolordiv">
             <section class="sectionscore">
           <div class="scorediv">
@@ -85,7 +88,7 @@
               <span id="challenger-1-name" class="scorespan">Challenger 1 Name</span>
               <p class="currentp">current guess</p>
               <p class="guessdisplay" id="guess1card">-</p>
-              <p id="howclose1" class="closedisplay">that's too high</p>
+              <p id="howclose1" class="closedisplay"></p>
             </div>
           </div>
             <div class="grayline"> </div>
@@ -93,7 +96,7 @@
               <span id="challenger-2-name" class="scorespan">Challenger 2 Name</span>
               <p class="currentp">current guess</p>
               <p class="guessdisplay" id="guess2card">-</p>
-              <p id="howclose2" class="closedisplay">that's too low</p>
+              <p id="howclose2" class="closedisplay"></p>
             </div>
             </section>
             </div>
@@ -102,7 +105,7 @@
       </main>
       <main class="mainright">
         <article class="cards">
-          <section class="winnercard sectionaside">
+          <section class="winnercard">
             <div class="backgroundcolordiv">
             <div class='cardheader'>
             <p id='chall1name'>CHALLENGER 1 NAME</p><span class="vs">vs</span><p id='chall2name'>CHALLENGER 2 NAME</p>
@@ -119,6 +122,7 @@
             </div>
           </div>
           </section>
+          <button id="secret" class="disappear" onclick="favoriteColor()">Secret Button</button>
       </article>
   </main>
 </div>
