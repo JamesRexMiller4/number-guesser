@@ -118,17 +118,32 @@ function resetGame() {
 }
 
 resetbtn.addEventListener('click', function(){
-      document.getElementById('challenge1').reset();
-      document.getElementById('challenge2').reset();
-      guesshint1.innerHTML = "";
-      guesshint2.innerHTML = "";
-      grabNameSpan1.innerHTML = "Challenger 1";
-      grabNameSpan2.innerHTML = "Challenger 2";
-      grabGuessP1.innerHTML = '-';
-      grabGuessP2.innerHTML = '-';
-      getRandomInt();
+      // document.getElementById('challenge1').reset();
+      // document.getElementById('challenge2').reset();
+      // guesshint1.innerHTML = "";
+      // guesshint2.innerHTML = "";
+      // grabNameSpan1.innerHTML = "Challenger 1";
+      // grabNameSpan2.innerHTML = "Challenger 2";
+      // grabGuessP1.innerHTML = '-';
+      // grabGuessP2.innerHTML = '-';
+      // getRandomInt();
       resetGame();
 });
+
+function favoriteColor() {
+    var themostimportantquestion = prompt("Whats your favorite color?", "");
+    if (themostimportantquestion != null) {
+      console.log(`Wow, ${themostimportantquestion} is a cool color, thanks for sharing. Run forthosewhoseek() in the console.`)
+    }
+
+}
+
+function cloneCard() {
+    var foo1 = document.querySelector('.winnercard')
+    var appendfoo = document.querySelector('.mainright')
+    var clone =foo1.cloneNode(true)
+    appendfoo.appendChild(clone);
+}
 
 
 // Reset Guess
