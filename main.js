@@ -108,9 +108,13 @@ var resetbtn = document.getElementById('reset-game')
 function resetGame() {
       document.getElementById('challenge1').reset();
       document.getElementById('challenge2').reset();
-      document.getElementById('rangeform').reset();
-      minSpan.innerText = "";
-      maxSpan.innerText= "";
+      guesshint1.innerHTML = "";
+      guesshint2.innerHTML = "";
+      grabNameSpan1.innerHTML = "Challenger 1";
+      grabNameSpan2.innerHTML = "Challenger 2";
+      grabGuessP1.innerHTML = '-';
+      grabGuessP2.innerHTML = '-';
+      getRandomInt();
 }
 
 resetbtn.addEventListener('click', function(){
