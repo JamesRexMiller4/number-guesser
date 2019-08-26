@@ -3,13 +3,10 @@ var maxRange = document.querySelector("#max-range");
 var button = document.querySelector('#update-btn');
 
 
-function changeString2(maxRange){
-  return parsed = parseInt(maxRange.value);
+function changeToInt(inputField){
+  return parsed = parseInt(inputField.value);
 }
 
-function changeString1(minRange){
-  return parsed = parseInt(minRange.value);
-}
 
 //
 // var inputmin = document.getElementById('min-range');
@@ -27,7 +24,7 @@ function displayRange() {
 
  function getRandomInt() {
    event.preventDefault();
-   randomInt = Math.floor(Math.random() * (changeString1(maxRange) - changeString2(minRange) + 1 )) + changeString2(minRange);
+   randomInt = Math.floor(Math.random() * (changeToInt(maxRange) - changeToInt(minRange) + 1 )) + changeToInt(minRange);
     console.log(randomInt);
  };
 
@@ -35,7 +32,8 @@ function displayRange() {
 
 button.addEventListener('click', function() {
         displayRange();
-        getRandomInt();
+				getRandomInt();
+				// stoppedTyping();
 
 });
 
@@ -98,8 +96,6 @@ guessbtn.addEventListener('click', function() {
 })
 
 
-
-
 // Reset Forms
 
 
@@ -123,7 +119,7 @@ resetbtn.addEventListener('click', function(){
       grabGuessP1.innerHTML = '-';
       grabGuessP2.innerHTML = '-';
       getRandomInt();
-      resetGame();
+			resetGame();
 });
 
 
@@ -198,3 +194,26 @@ guessbtn.addEventListener('click', function() {
       guessHint();
       konamiCode();
 })
+
+// Buttons should be disabled if there is not input
+
+function stoppedTyping() {
+	var clearGame = document.querySelector('#clear-game')
+	if((grabGuess1.value.length > 0 || grabGuess2.value.length > 0)) { 
+		clearGame.disabled = false; 
+} else {  
+		clearGame.disabled = true;
+	}
+}
+
+function resetGame() {
+	var allInputs = document.querySelectorAll('input')
+	console.log(allInputs)
+	if (allInputs.value.length > 0){
+		resetbtn.disabled = false;
+	} else {
+		resetbtn.disabled = true;
+	}
+}
+
+// set attributes
