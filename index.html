@@ -2,126 +2,126 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-     <title>NumberGuesser</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+      <title>NumberGuesser</title>
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
   </head>
-   <body>
-     <header>
-       <container class="header-container">
-         <h1>NUMBER<span id="second-half-heading">GUESSER</span></h1>
+    <body>
+      <header>
+        <container class="header-container">
+        <h1>NUMBER<span id="second-half-heading">GUESSER</span></h1>
           <section class="sub-header-section">
-           <div class="line"></div>
-           <p id="sub-header">ULTIMATE CHALLENGER EDITION</p>
-           <div class="line"></div>
-         </section>
-       </container>
-    </header>
-    <div class="wrapper">
-    <main role="main" class="mainleft">
-      <article>
-        <section class="workingtitle spacing">
-          <h3>Set Range</h3>
-            <form id="rangeform">
-              <div class="divrange">
-              <label>Min Range</label>
-              <input id="min-range" type="number">
-              </div>
-              <div class="divrange">
-              <label>Max Range</label>
-              <input id="max-range" type="number">
-              </div>
-              <button id="update-btn">
-                UPDATE
-            </button>
-          </form>
-        </section>
-      <section class="naming spacing">
-        <div class="backgroundcolordiv">
-        <p>The Current Range is <span id="min-span" class="spanstyle"></span> to <span class="spanstyle"id="max-span"></span></p>
-            <h3>Challenger 1</h3>
-            <form id="challenge1">
-              <div class="challengediv">
-                <label>Name</label>
-                <input id="player1name" class="inchallenge" type="text">
-              </div>
-              <div class="guessdiv">
-                <label>Guess</label>
-                <input id="player1guess" type="number">
-              </div>
-            </form>
-          <div>
-            <h3>Challenger 2</h3>
-            <form id="challenge2">
-              <div class="challengediv">
-              <label>Name</label>
-              <input id="player2name" class="inchallenge" type="text">
-              </div>
-              <div class="guessdiv">
-              <label>Guess</label>
-              <input id="player2guess" type="number">
-              </div>
-            </form>
-          </div>
-          <div class="divbtns">
-            <button id="submit-guess" class="submitbtn">
-              SUBMIT GUESS
-            </button>
-            <button id="reset-game" class="btninactive">
-              RESET GAME
-            </button>
-            <button id="clear-game" class="btninactive">
-              CLEAR GAME
-            </button>
-          </div>
-          </div>
-      </section>
+            <div class="line"></div>
+              <p id="sub-header">ULTIMATE CHALLENGER EDITION</p>
+            <div class="line"></div>
+          </section>
+        </container>
+      </header>
+      <container id="game-container">
+        <main id="mainleft">
+          <article>
+            <section class="workingtitle spacing">
+              <h3>Set Range</h3>
+                <form id="rangeform">
+                  <div class="divrange">
+                    <label>Min Range</label>
+                    <input id="min-range" type="number" onkeyup="resetGame()">
+                  </div>
+                  <div class="divrange">
+                    <label>Max Range</label>
+                    <input id="max-range" type="number" onkeyup="resetGame()">
+                  </div>
+                  <button id="update-btn">
+                    UPDATE
+                  </button>
+                </form>
+            </section>
+          <section class="naming spacing">
+            <div class="backgroundcolordiv">
+              <p>The Current Range is <span id="min-span" class="spanstyle"></span> to <span class="spanstyle"id="max-span"></span></p>
+                <h3>Challenger 1</h3>
+                  <form id="challenge1">
+                    <div class="challengediv">
+                      <label>Name</label>
+                      <input id="player1name" class="inchallenge" type="text" onkeyup="resetGame()">
+                    </div>
+                    <div class="players-guess">
+                      <label>Guess</label>
+                      <input id="player1guess" type="number" onkeyup="stoppedTyping(),resetGame()">
+                    </div>
+                  </form>
+                  <div>
+                  <h3>Challenger 2</h3>
+                    <form id="challenge2">
+                      <div class="challengediv">
+                        <label>Name</label>
+                        <input id="player2name" class="inchallenge" type="text" onkeyup="resetGame()">
+                      </div>
+                      <div class="players-guess">
+                        <label>Guess</label>
+                        <input id="player2guess" type="number" onkeyup="stoppedTyping(),resetGame()">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="divbtns">
+                    <button id="submit-guess" class="submitbtn">
+                      SUBMIT GUESS
+                    </button>
+                    <button id="reset-game" disabled >
+                      RESET GAME
+                    </button>
+                    <button id="clear-game" disabled>
+                      CLEAR GAME
+                    </button>
+                  </div>
+            </div>
+          </section>
           <section class="score">
             <div class="backgroundcolordiv">
-            <section class="sectionscore">
-          <div class="scorediv">
-            <h3>Latest Score</h3>
-            <div class="challenger1 divscore">
-              <span id="challenger-1-name" class="scorespan">Challenger 1 Name</span>
-              <p class="currentp">current guess</p>
-              <p class="guessdisplay" id="guess1card">-</p>
-              <p id="howclose1" class="closedisplay">that's too high</p>
-            </div>
-          </div>
-            <div class="grayline"> </div>
-            <div class="challenger2 divscore">
-              <span id="challenger-2-name" class="scorespan">Challenger 2 Name</span>
-              <p class="currentp">current guess</p>
-              <p class="guessdisplay" id="guess2card">-</p>
-              <p id="howclose2" class="closedisplay">that's too low</p>
-            </div>
+              <section class="sectionscore">
+                <div class="scorediv">
+                  <h3>Latest Score</h3>
+                    <div class="challenger1 divscore">
+                      <span id="challenger-1-name" class="scorespan">Challenger 1 Name</span>
+                        <p class="currentp">current guess</p>
+                        <p class="guessdisplay" id="guess1card">?</p>
+                        <p id="howclose1" class="closedisplay">that's too high</p>
+                    </div>
+                </div>
+                <div class="grayline"> </div>
+                <div class="challenger2 divscore">
+                  <span id="challenger-2-name" class="scorespan">Challenger 2 Name</span>
+                    <p class="currentp">current guess</p>
+                    <p class="guessdisplay" id="guess2card">?</p>
+                    <p id="howclose2" class="closedisplay">that's too low</p>
+                  </div>
+                </section>
+              </div>
             </section>
-            </div>
-          </section>
-        </article>
-      </main>
-      <main class="mainright">
-        <article class="cards">
-          <section class="winnercard sectionaside">
-            <div class="backgroundcolordiv">
-            <div class='cardheader'>
-            <p id='chall1name'>CHALLENGER 1 NAME</p><span class="vs">vs</span><p id='chall2name'>CHALLENGER 2 NAME</p>
-            </div>
-            <div class="grayhorizonline top"> </div>
-            <div class="centercardname">
-            <h2 id="winnernamecard" class="cardnameWin">Challenger 1 Name</h2>
-            <h3 id="result">Winner</h3>
-            </div>
-            <div class="grayhorizonline bottom"> </div>
-            <div class="cardfooter">
-            <span id="spannumofGuess">20</span><p>GUESSES</p><span id="spanTimetoWin">20</span><p>MINUTES</p>
-            <button id="exitbtn">X</button>
-            </div>
-          </div>
-          </section>
-      </article>
-  </main>
-</div>
+          </article>
+        </main>
+        <main id="mainright">
+          <article class="cards">
+            <section class="winnercard sectionaside">
+              <div class="backgroundcolordiv">
+                <div class='cardheader'>
+                  <p id='chall1name'>CHALLENGER 1 NAME</p><span class="vs">vs</span><p id='chall2name'>CHALLENGER 2 NAME</p>
+                </div>
+                <div class="grayhorizonline top"> </div>
+                  <div class="centercardname">
+                    <h2 id="winnernamecard" class="cardnameWin">Challenger 1 Name</h2>
+                    <h3 id="result">Winner</h3>
+                  </div>
+                  <div class="grayhorizonline bottom"> </div>
+                  <div class="cardfooter">
+                    <span id="spannumofGuess">20</span><p>GUESSES</p><span id="spanTimetoWin">20</span><p>MINUTES</p>
+                      <button id="exitbtn">X</button>
+                  </div>
+                </div>
+            </section>
+          </article>
+        </main>
+      </container>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
