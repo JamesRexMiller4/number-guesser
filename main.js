@@ -106,7 +106,7 @@ function resetGame() {
       document.getElementById('challenge2').reset();
       document.getElementById('rangeform').reset();
       minSpan.innerText = "";
-      maxSpan.innerText= "";
+      maxSpan.innerText = "";
 }
 
 resetbtn.addEventListener('click', function(){
@@ -142,15 +142,15 @@ function guessHint() {
     guesshint2.innerHTML = "That's too high";
   } else guesshint2.innerHTML = "That's too low";
 
-  if (card1guess == randomInt) {
-    guesshint1.innerHTML = "BOOM!";
-    guesshint2.innerHTML = "Loser!";
+  if (card1guess == card2guess && card1guess == randomInt) {
+    guesshint2.innerHTML = "TIE!";
+    guesshint1.innerHTML = "TIE!";
   } else if (card2guess == randomInt) {
     guesshint2.innerHTML = "BOOM!";
     guesshint1.innerHTML = "Loser!";
-  } else if (card1guess == card2guess && card1guess == randomInt) {
-    guesshint2.innerHTML = "TIE!";
-    guesshint1.innerHTML = "TIE!";
+  } else if (card1guess == randomInt) {
+    guesshint1.innerHTML = "BOOM!";
+    guesshint2.innerHTML = "Loser!";
   }
     else return
 }
@@ -206,14 +206,12 @@ function stoppedTyping() {
 	}
 }
 
-function resetGame() {
-	var allInputs = document.querySelectorAll('input')
-	console.log(allInputs)
-	if (allInputs.value.length > 0){
-		resetbtn.disabled = false;
-	} else {
-		resetbtn.disabled = true;
-	}
-}
-
-// set attributes
+// function resetGame() {
+// 	var allInputs = document.querySelectorAll('input')
+// 	console.log(allInputs)
+// 	for (i = 0; i > 5; i++){
+// 		allInputs[i].value.length > 0
+// 		resetbtn.disabled = false;
+// 		i++;
+// 	}
+// }
