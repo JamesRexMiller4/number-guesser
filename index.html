@@ -26,10 +26,12 @@
                   <div class="divrange">
                     <label>Min Range</label>
                     <input id="min-range" type="number">
+                    <!-- onkeydown="resetGame() -->
                   </div>
                   <div class="divrange">
                     <label>Max Range</label>
                     <input id="max-range" type="number">
+                    <!-- onkeydown="resetGame() -->
                   </div>
                   <button id="update-btn">
                     UPDATE
@@ -43,11 +45,11 @@
                   <form id="challenge1">
                     <div class="challengediv">
                       <label>Name</label>
-                      <input id="player1name" class="inchallenge" type="text">
+                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()">
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" type="number" onkeyup=stoppedTyping()>
+                      <input id="player1guess" class="reset-function" type="number" onkeyup="stoppedTyping(); resetButtonFunction()">
                     </div>
                   </form>
                   <div>
@@ -55,11 +57,11 @@
                     <form id="challenge2">
                       <div class="challengediv">
                         <label>Name</label>
-                        <input id="player2name" class="inchallenge" type="text">
+                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()">
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>
-                        <input id="player2guess" type="number" onkeyup=stoppedTyping()>
+                        <input id="player2guess" class="reset-function" type="number" onkeyup="stoppedTyping(); resetButtonFunction()">
                       </div>
                     </form>
                   </div>
