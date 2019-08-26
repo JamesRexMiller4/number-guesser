@@ -25,29 +25,29 @@
                 <form id="rangeform">
                   <div class="divrange">
                     <label>Min Range</label>
-                    <input id="min-range" type="number" onkeyup="resetGame()">
+                    <input id="min-range" type="number">
                   </div>
                   <div class="divrange">
                     <label>Max Range</label>
-                    <input id="max-range" type="number" onkeyup="resetGame()">
+                    <input id="max-range" type="number">
                   </div>
                   <button id="update-btn">
                     UPDATE
                   </button>
                 </form>
             </section>
-          <section class="naming spacing">
+          <section class="input-field spacing">
             <div class="backgroundcolordiv">
               <p>The Current Range is <span id="min-span" class="spanstyle"></span> to <span class="spanstyle"id="max-span"></span></p>
                 <h3>Challenger 1</h3>
                   <form id="challenge1">
                     <div class="challengediv">
                       <label>Name</label>
-                      <input id="player1name" class="inchallenge" type="text" onkeyup="resetGame()">
+                      <input id="player1name" class="inchallenge" type="text">
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" type="number" onkeyup="stoppedTyping(),resetGame()">
+                      <input id="player1guess" type="number" onkeyup=stoppedTyping()>
                     </div>
                   </form>
                   <div>
@@ -55,11 +55,11 @@
                     <form id="challenge2">
                       <div class="challengediv">
                         <label>Name</label>
-                        <input id="player2name" class="inchallenge" type="text" onkeyup="resetGame()">
+                        <input id="player2name" class="inchallenge" type="text">
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>
-                        <input id="player2guess" type="number" onkeyup="stoppedTyping(),resetGame()">
+                        <input id="player2guess" type="number" onkeyup=stoppedTyping()>
                       </div>
                     </form>
                   </div>
@@ -67,7 +67,7 @@
                     <button id="submit-guess" class="submitbtn">
                       SUBMIT GUESS
                     </button>
-                    <button id="reset-game" disabled >
+                    <button id="reset-game" disabled>
                       RESET GAME
                     </button>
                     <button id="clear-game" disabled>
