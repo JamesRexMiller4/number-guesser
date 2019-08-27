@@ -26,6 +26,7 @@ var card1name = grabName1.value;
 var card2name = grabName2.value;
 var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
+var newCard = document.querySelector('.cards')
 
 // Displays range and grabs random integer
 button.addEventListener('click', function() {
@@ -38,7 +39,7 @@ button.addEventListener('click', function() {
 guessbtn.addEventListener('click', function() {
   changeName();
   changeGuess();
-  determineWinner();
+  // determineWinner();
   guessHint();
   konamiCode();
 });
@@ -110,7 +111,7 @@ function resetGame() {
 // provides hint according to players guess
 function guessHint() {
   var card1guess = grabGuess1.value;
-  var card2guess = grabGuess2.value;
+	var card2guess = grabGuess2.value;
 
   if (card1guess > randomInt) {
     guesshint1.innerHTML = "That's too high";
@@ -124,29 +125,15 @@ function guessHint() {
     guesshint2.innerHTML = "TIE!";
     guesshint1.innerHTML = "TIE!";
   } else if (card2guess == randomInt) {
+		winnername = grabName2.value;
     guesshint2.innerHTML = "BOOM!";
-    guesshint1.innerHTML = "Loser!";
+		guesshint1.innerHTML = "Loser!";
+		createNewCard();
   } else if (card1guess == randomInt) {
+		winnername = grabName1.value;
     guesshint1.innerHTML = "BOOM!";
-    guesshint2.innerHTML = "Loser!";
-  } else return
-}
-// 
-function determineWinner() {
-  var card1guess = grabGuess1.value;
-  var card2guess = grabGuess2.value;
-
-  if (card1guess == card2guess && card1guess == randomInt) {
-    alert("It's a TIE! Reset the game to play again");
-    return
-  } else if (card1guess == randomInt && card2guess != randomInt) {
-    winnername.innerHTML = grabName1.value
-    vs1.innerHTML = grabName1.value
-    vs2.innerHTML = grabName2.value
-  } else if (card2guess == randomInt && card1guess != randomInt) {
-    winnername.innerHTML = grabName2.value
-    vs1.innerHTML = grabName1.value
-    vs2.innerHTML = grabName2.value
+		guesshint2.innerHTML = "Loser!";
+		createNewCard();
   } else return
 }
 
@@ -172,8 +159,8 @@ function resetButtonFunction() {
   var ele = document.getElementsByClassName('reset-function');
   for (i = 0; i < ele.length; i++) {
 
-  }
-  // if(
+	}
+	
   if (
     grabName1.length == 0 && grabName2.length == 0 &&
     grabGuess1.value == 0 && grabGuess2.value == 0) {
@@ -181,3 +168,39 @@ function resetButtonFunction() {
   } else
     resetbtn.disabled = false;
 }
+
+function errorMessage() {
+	if (grabGuess1.value || grabGuess2.value > maxRange){ 
+	 document.querySelector('.error').classList.add('errorBorder')
+	} else {
+		document.querySelector('.error').classList.remove('errorBorder')
+	}  
+}
+
+function createNewCard() {
+	newCard.innerHTML += 
+      `<section class="winnercard sectionaside">
+      <div class="backgroundcolordiv">
+      <div class='cardheader'>
+        <p id='chall1name'>${grabName1.value}</p>
+          <span class="vs">vs</span>
+        <p id='chall2name'>${grabName2.value}</p>
+      </div>
+        <div class="grayhorizonline top"> </div>
+        <div class="centercardname">
+          <h2 id="winnernamecard" class="cardnameWin">${winnername}</h2>
+           <h3 id="result">Winner</h3>
+        </div>
+        <div class="grayhorizonline bottom"> </div>
+        <div class="cardfooter">
+        <span id="spannumofGuess">20</span><p>GUESSES</p>
+          <span id="spanTimetoWin">20</span><p>MINUTES</p>
+             <button id="exitbtn">X</button>
+           </div>
+          </div>
+         </section>`
+	}
+
+
+
+
