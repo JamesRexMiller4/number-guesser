@@ -56,8 +56,6 @@ h1 {
   width: 27%;
 }
 
-/*  Elements */
-
 body{
   margin: 0 auto;
 }
@@ -81,7 +79,6 @@ body{
   width: 50%;
   height: 920px;
   margin: auto;
-  /* padding-top: 500px; */
   border-left: 2px solid;
   border-color: #aaaaaa;
   overflow: auto;
@@ -102,12 +99,10 @@ article {
 
 
 form {
-  /* border: 1px solid black; */
   margin-top: -10px;
   width: 100%;
   display: flex;
   flex-direction: row wrap;
-
 }
 
 .divrange {
@@ -115,8 +110,6 @@ form {
   flex-direction: column;
   width: 50%;
   margin-left: -5px;
-  /* border: 1px solid red; */
-
 }
 
 h3 {
@@ -157,7 +150,7 @@ button {
 .btnactive {
   color: #6E6E6E;
 }
-/* Section 1 , 2 , 3 */
+
 .workingtitle {
  background: #ffffff;
  display: flex;
@@ -207,14 +200,6 @@ button {
   margin-left: 41px;
 }
 
-.errorBorder{
-  border: 2px solid #DD1972;
-    /* border-radius: 7px; */
-    outline: none;
-    border-color: #DD1972;
-    box-shadow: 0 0 10px #DD1972;
-}
-
 .spanstyle {
   font-weight: bold;
   text-decoration: underline;
@@ -252,7 +237,6 @@ button {
   width: 110%;
   display: flex;
   justify-content: space-around;
-
 }
 
 .divbtns button {

@@ -1,24 +1,25 @@
 var minRange = document.querySelector("#min-range");
 var maxRange = document.querySelector("#max-range");
 var button = document.querySelector('#update-btn');
+var newCard = document.querySelector('.cards');
 var minSpan = document.getElementById('min-span');
 var maxSpan = document.getElementById('max-span');
-var grabName1 = document.getElementById('player1name')
-var grabName2 = document.getElementById('player2name')
-var grabGuess1 = document.getElementById('player1guess')
-var grabGuess2 = document.getElementById('player2guess')
-var grabNameSpan1 = document.getElementById('challenger-1-name')
-var grabNameSpan2 = document.getElementById('challenger-2-name')
-var grabGuessP1 = document.getElementById('guess1card')
-var grabGuessP2 = document.getElementById('guess2card')
+var grabName1 = document.getElementById('player1name');
+var grabName2 = document.getElementById('player2name');
+var grabGuess1 = document.getElementById('player1guess');
+var grabGuess2 = document.getElementById('player2guess');
+var grabNameSpan1 = document.getElementById('challenger-1-name');
+var grabNameSpan2 = document.getElementById('challenger-2-name');
+var grabGuessP1 = document.getElementById('guess1card');
+var grabGuessP2 = document.getElementById('guess2card');
 var plyr1vs = document.getElementById('chall1name');
 var plyr2vs = document.getElementById('chall2name');
 var winnername = document.getElementById('winnernamecard');
 var guesshint1 = document.getElementById('howclose1');
 var guesshint2 = document.getElementById('howclose2');
-var guessbtn = document.getElementById('submit-guess')
-var resetbtn = document.getElementById('reset-game')
-var clearbtn = document.getElementById('clear-game')
+var guessbtn = document.getElementById('submit-guess');
+var resetbtn = document.getElementById('reset-game');
+var clearbtn = document.getElementById('clear-game');
 var vs1 = document.getElementById('chall1name');
 var vs2 = document.getElementById('chall2name');
 var winnername = document.getElementById('winnernamecard');
@@ -26,10 +27,8 @@ var card1name = grabName1.value;
 var card2name = grabName2.value;
 var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
-var newCard = document.querySelector('.cards')
 var guesscount = 0;
 var timestart = 0;
-// var displaycount = 0;
 
 // Displays range and grabs random integer
 button.addEventListener('click', function() {
@@ -109,9 +108,6 @@ function resetGame() {
   document.getElementById('challenge2').reset();
   guesscount = 0;
   timestart = 0;
-  // document.getElementById('rangeform').reset();
-  // minSpan.innerText = "";
-  // maxSpan.innerText = "";
 }
 
 // provides hint according to players guess
@@ -157,8 +153,8 @@ function timeKeeper() {
     return
   } else timestart = new Date();
 }
-// Buttons should be disabled if there is not input
 
+// Buttons should be disabled if there is not input
 function stoppedTyping() {
   var clearGame = document.querySelector('#clear-game')
   if ((grabGuess1.value.length > 0 || grabGuess2.value.length > 0)) {
@@ -168,6 +164,7 @@ function stoppedTyping() {
   }
 }
 
+// Secret Button
 function favoriteColor() {
     var themostimportantquestion = prompt("Whats your favorite color?", "");
     if (themostimportantquestion != null) {
@@ -175,6 +172,7 @@ function favoriteColor() {
     }
 }
 
+// tracks how many guess
 function countGuess() {
   guesscount += 1;
 }
@@ -182,9 +180,7 @@ function countGuess() {
 function resetButtonFunction() {
   var ele = document.getElementsByClassName('reset-function');
   for (i = 0; i < ele.length; i++) {
-
-	}
-
+}
   if (
     grabName1.length == 0 && grabName2.length == 0 &&
     grabGuess1.value == 0 && grabGuess2.value == 0) {
@@ -193,14 +189,7 @@ function resetButtonFunction() {
     resetbtn.disabled = false;
 }
 
-function errorMessage() {
-	if (grabGuess1.value || grabGuess2.value > maxRange){
-	 document.querySelector('.error').classList.add('errorBorder')
-	} else {
-		document.querySelector('.error').classList.remove('errorBorder')
-	}
-}
-
+// displays new card on main right
 function createNewCard() {
   timeend = new Date()
   timediff = timeend - timestart
