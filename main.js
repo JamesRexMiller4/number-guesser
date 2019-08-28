@@ -70,6 +70,8 @@ clearbtn.addEventListener('click', function() {
   clearbtn.disabled = true
 });
 
+newCard.addEventListener('click', deleteCard)
+
 // changes strings to integers
 function changeToInt(inputField) {
   return parseInt(inputField.value);
@@ -213,11 +215,17 @@ function createNewCard() {
         <div class="cardfooter">
         <span id="spannumofGuess">${displaycount}</span><p>GUESSES</p>
           <span id="spanTimetoWin">${displaytime}</span><p>MINUTES</p>
-             <button id="exitbtn">X</button>
+             <button id="exitbtn" class="delete">X</button>
            </div>
           </div>
          </section>`
 	}
+
+  function deleteCard(event) {
+  if (event.target.closest('button').classList.contains('delete'))
+    event.target.parentNode.parentNode.parentNode.remove();
+}
+
 
 
   function forthosewhoseek() {
