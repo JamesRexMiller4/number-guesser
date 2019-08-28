@@ -27,6 +27,8 @@ var card2name = grabName2.value;
 var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
 var newCard = document.querySelector('.cards')
+var guesscount = 0;
+// var displaycount = 0;
 
 // Displays range and grabs random integer
 button.addEventListener('click', function() {
@@ -39,6 +41,7 @@ button.addEventListener('click', function() {
 guessbtn.addEventListener('click', function() {
   changeName();
   changeGuess();
+  countGuess();
   guessHint();
   konamiCode();
 });
@@ -102,6 +105,7 @@ function changeGuess() {
 function resetGame() {
   document.getElementById('challenge1').reset();
   document.getElementById('challenge2').reset();
+  guesscount = 0;
   // document.getElementById('rangeform').reset();
   // minSpan.innerText = "";
   // maxSpan.innerText = "";
@@ -123,6 +127,7 @@ function guessHint() {
   if (card1guess == card2guess && card1guess == randomInt) {
     guesshint2.innerHTML = "TIE!";
     guesshint1.innerHTML = "TIE!";
+    alert("TIE! Reset the game to play again")
   } else if (card2guess == randomInt) {
 		winnername = grabName2.value;
     guesshint2.innerHTML = "BOOM!";
@@ -154,6 +159,17 @@ function stoppedTyping() {
   }
 }
 
+function favoriteColor() {
+    var themostimportantquestion = prompt("Whats your favorite color?", "");
+    if (themostimportantquestion != null) {
+      console.log(`Wow, ${themostimportantquestion} is a cool color, thanks for sharing. Run forthosewhoseek() in the console.`)
+    }
+}
+
+function countGuess() {
+  guesscount += 1;
+}
+
 function resetButtonFunction() {
   var ele = document.getElementsByClassName('reset-function');
   for (i = 0; i < ele.length; i++) {
@@ -177,6 +193,7 @@ function errorMessage() {
 }
 
 function createNewCard() {
+  displaycount = guesscount;
 	newCard.innerHTML +=
       `<section class="winnercard sectionaside">
       <div class="backgroundcolordiv">
@@ -192,10 +209,105 @@ function createNewCard() {
         </div>
         <div class="grayhorizonline bottom"> </div>
         <div class="cardfooter">
-        <span id="spannumofGuess">20</span><p>GUESSES</p>
+        <span id="spannumofGuess">${displaycount}</span><p>GUESSES</p>
           <span id="spanTimetoWin">20</span><p>MINUTES</p>
              <button id="exitbtn">X</button>
            </div>
           </div>
          </section>`
 	}
+
+
+  function forthosewhoseek() {
+
+
+  //
+  //
+  //
+  // -\-
+  // \-- \-
+  //  \  - -\
+  //   \      \\
+  //    \       \
+  //     \       \\
+  //      \        \\
+  //      \          \\
+  //      \           \\\
+  //       \            \\
+  //        \            \\
+  //        \. .          \\
+  //         \    .       \\
+  //          \      .    \\
+  //           \       .  \\
+  //           \         . \\
+  //           \            <=)
+  //           \            <==)
+  //           \            <=)
+  //            \           .\\                                           _-
+  //            \         .   \\                                        _-//
+  //            \       .     \\                                     _-_/ /
+  //            \ . . .        \\                                 _--_/ _/
+  //             \              \\                              _- _/ _/
+  //             \               \\                      ___-(O) _/ _/
+  //             \                \                  __--  __   /_ /      ***********************************
+  //             \                 \\          ____--__----  /    \_    https://www.youtube.com/watch?v=KOOhPfMbuIQ
+  //              \                  \\       -------       /   \_  \_    ***********************************
+  //               \                   \                  //   // \__ \_
+  //                \                   \\              //   //      \_ \_
+  //                 \                   \\          ///   //          \__-
+  //                 \                -   \\/////////    //
+  //                 \            -         \_         //
+  //                 /        -                      //
+  //                /     -                       ///
+  //               /   -                       //
+  //          __--/                         ///
+  // __________/                            // |
+  // //-_________      ___                ////  |
+  //     ____\__--/                /////    |
+  // -----______    -/---________////        |
+  //  _______/  --/    \                   |
+  // /_________-/       \                   |
+  // //                  \                   /
+  //                    \.                 /
+  //                    \     .            /
+  //                     \       .        /
+  //                    \\           .    /
+  //                     \                /
+  //                     \              __|
+  //                     \              ==/
+  //                     /              //
+  //                     /          .  //
+  //                     /   .  .    //
+  //                    /.           /
+  //                   /            //
+  //                   /           /
+  //                  /          //
+  //                 /         //
+  //              --/         /
+  //             /          //
+  //         ////         //
+  //      ///_________////
+  //
+  //
+  //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log("073 102 032 121 111 117 032 104 097 118 101 032 109 097 100 101 032 105 116 032 116 104 105 115 032 102 097 114 032 116 104 101 110 032 073 032 099 111 110 103 114 097 116 117 108 097 116 101 032 121 111 117 046 032 083 111 109 101 032 097 110 115 119 101 114 115 032 111 110 108 121 032 114 101 118 101 097 108 032 116 104 101 109 115 101 108 118 101 115 032 119 104 101 110 032 121 111 117 032 097 115 107 032 116 104 101 032 114 105 103 104 116 032 113 117 101 115 116 105 111 110 046 032 084 104 117 115 044 032 100 105 118 101 032 100 101 101 112 032 105 110 116 111 032 116 104 101 032 114 097 098 098 105 116 032 104 111 108 101 115 046 046 046 032 097 110 100 032 110 101 118 101 114 032 115 116 111 112 032 097 115 107 105 110 103 032 113 117 101 115 116 105 111 110 115 046")
+  }

@@ -441,3 +441,19 @@ button:disabled {
   border-radius: 50%;
   color: #ffffff;
 }
+
+#secret {
+  cursor: crosshair;
+  font-size: 10px;
+  color: red;
+  width: 100px;
+  height: 20px;
+}
+
+#secret:hover {
+  background-color: royalblue;
+}
+
+.disappear {
+  visibility: hidden;
+}
