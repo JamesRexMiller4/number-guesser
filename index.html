@@ -25,12 +25,12 @@
                 <form id="rangeform">
                   <div class="divrange">
                     <label>Min Range</label>
-                    <input id="min-range" type="number">
+                    <input id="min-range" type="number" autocomplete="off">
                     <!-- onkeydown="resetGame() -->
                   </div>
                   <div class="divrange">
                     <label>Max Range</label>
-                    <input id="max-range" type="number">
+                    <input id="max-range" type="number" autocomplete="off">
                     <!-- onkeydown="resetGame() -->
                   </div>
                   <button id="update-btn">
@@ -45,11 +45,11 @@
                   <form id="challenge1">
                     <div class="challengediv">
                       <label>Name</label>
-                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()">
+                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()" autocomplete="off">
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction(); errorMessage()">
+                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction(); errorMessage()" autocomplete="off">
                     </div>
                   </form>
                   <div>
@@ -57,11 +57,11 @@
                     <form id="challenge2">
                       <div class="challengediv">
                         <label>Name</label>
-                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()">
+                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()" autocomplete="off">
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>
-                        <input id="player2guess" class="reset-function" type="number" onkeyup="stoppedTyping(); resetButtonFunction()">
+                        <input id="player2guess" class="reset-function" type="number" onkeyup="stoppedTyping(); resetButtonFunction()" autocomplete="off">
                       </div>
                     </form>
                   </div>
@@ -87,7 +87,7 @@
                       <span id="challenger-1-name" class="scorespan">Challenger 1 Name</span>
                         <p class="currentp">current guess</p>
                         <p class="guessdisplay" id="guess1card">?</p>
-                        <p id="howclose1" class="closedisplay">that's too high</p>
+                        <p id="howclose1" class="closedisplay"></p>
                     </div>
                 </div>
                 <div class="grayline"> </div>
@@ -95,7 +95,7 @@
                   <span id="challenger-2-name" class="scorespan">Challenger 2 Name</span>
                     <p class="currentp">current guess</p>
                     <p class="guessdisplay" id="guess2card">?</p>
-                    <p id="howclose2" class="closedisplay">that's too low</p>
+                    <p id="howclose2" class="closedisplay"></p>
                   </div>
                 </section>
               </div>
@@ -104,7 +104,7 @@
         </main>
         <main id="mainright">
           <article class="cards">
-            
+              <button id="secret" class="disappear" onclick="favoriteColor()">Secret Button</button>
           </article>
         </main>
       </container>

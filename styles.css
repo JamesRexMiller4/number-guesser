@@ -77,11 +77,13 @@ body{
 #mainright {
   background: #D1D2D4;
   display: flex;
-  flex: row nowrap;
+  flex: column wrap;
   width: 50%;
-  margin: 0 auto;
+  height: 920px;
+  /* padding-top: 500px; */
   border-left: 2px solid;
   border-color: #aaaaaa;
+  overflow: auto;
 }
 
 article {
@@ -358,6 +360,9 @@ button:disabled {
   width: 100%;
   background: #D1D2D4;
   display: flex;
+  flex-flow: row wrap;
+  overflow: scroll;
+  height: 940px;
   justify-content: center;
   align-items: center;
 }
@@ -435,4 +440,20 @@ button:disabled {
   height: 40px;
   border-radius: 50%;
   color: #ffffff;
+}
+
+#secret {
+  cursor: crosshair;
+  font-size: 10px;
+  color: red;
+  width: 100px;
+  height: 20px;
+}
+
+#secret:hover {
+  background-color: royalblue;
+}
+
+.disappear {
+  visibility: hidden;
 }
