@@ -26,12 +26,10 @@
                   <div class="divrange">
                     <label>Min Range</label>
                     <input id="min-range" type="number" autocomplete="off">
-                    <!-- onkeydown="resetGame() -->
                   </div>
                   <div class="divrange">
                     <label>Max Range</label>
                     <input id="max-range" type="number" autocomplete="off">
-                    <!-- onkeydown="resetGame() -->
                   </div>
                   <button id="update-btn">
                     UPDATE
@@ -49,7 +47,7 @@
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction(); errorMessage()" autocomplete="off">
+                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction()" autocomplete="off">
                     </div>
                   </form>
                   <div>
@@ -103,7 +101,7 @@
           </article>
         </main>
         <main id="mainright">
-          <button id="secret" class="disappear" onclick="favoriteColor()">?</button>
+          <button id="secret" onclick="favoriteColor()">?</button>
           <article class="cards">
           </article>
         </main>
