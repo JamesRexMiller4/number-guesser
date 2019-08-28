@@ -28,6 +28,7 @@ var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
 var newCard = document.querySelector('.cards')
 var guesscount = 0;
+var timestart = 0;
 // var displaycount = 0;
 
 // Displays range and grabs random integer
@@ -42,6 +43,7 @@ guessbtn.addEventListener('click', function() {
   changeName();
   changeGuess();
   countGuess();
+  timeKeeper();
   guessHint();
   konamiCode();
 });
@@ -106,6 +108,7 @@ function resetGame() {
   document.getElementById('challenge1').reset();
   document.getElementById('challenge2').reset();
   guesscount = 0;
+  timestart = 0;
   // document.getElementById('rangeform').reset();
   // minSpan.innerText = "";
   // maxSpan.innerText = "";
@@ -147,6 +150,12 @@ function konamiCode() {
   if (card1guess == card2guess && card1guess == 42) {
     alert("Don't Panic :) ")
   } else return
+}
+
+function timeKeeper() {
+  if (timestart != 0) {
+    return
+  } else timestart = new Date();
 }
 // Buttons should be disabled if there is not input
 
@@ -193,6 +202,10 @@ function errorMessage() {
 }
 
 function createNewCard() {
+  timeend = new Date()
+  timediff = timeend - timestart
+  timediff = (timediff/1000) / 60
+  displaytime = timediff.toFixed(2)
   displaycount = guesscount;
 	newCard.innerHTML +=
       `<section class="winnercard sectionaside">
@@ -210,7 +223,7 @@ function createNewCard() {
         <div class="grayhorizonline bottom"> </div>
         <div class="cardfooter">
         <span id="spannumofGuess">${displaycount}</span><p>GUESSES</p>
-          <span id="spanTimetoWin">20</span><p>MINUTES</p>
+          <span id="spanTimetoWin">${displaytime}</span><p>MINUTES</p>
              <button id="exitbtn">X</button>
            </div>
           </div>
