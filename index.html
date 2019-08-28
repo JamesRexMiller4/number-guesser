@@ -45,11 +45,11 @@
                   <form id="challenge1">
                     <div class="challengediv">
                       <label>Name</label>
-                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()">
+                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="return /[0-9a-zA-Z]/i.test(event.key); resetButtonFunction()">
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction(); errorMessage()">
+                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction()">
                     </div>
                   </form>
                   <div>
@@ -57,7 +57,7 @@
                     <form id="challenge2">
                       <div class="challengediv">
                         <label>Name</label>
-                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()">
+                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="return /[0-9a-zA-Z]/i.test(event.key); resetButtonFunction()">
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>

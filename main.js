@@ -22,11 +22,12 @@ var clearbtn = document.getElementById('clear-game')
 var vs1 = document.getElementById('chall1name');
 var vs2 = document.getElementById('chall2name');
 var winnername = document.getElementById('winnernamecard');
+var newCard = document.querySelector('.cards')
 var card1name = grabName1.value;
 var card2name = grabName2.value;
 var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
-var newCard = document.querySelector('.cards')
+
 
 // Displays range and grabs random integer
 button.addEventListener('click', function() {
@@ -39,7 +40,6 @@ button.addEventListener('click', function() {
 guessbtn.addEventListener('click', function() {
   changeName();
   changeGuess();
-  // determineWinner();
   guessHint();
   konamiCode();
 });
@@ -165,16 +165,12 @@ function resetButtonFunction() {
     grabName1.length == 0 && grabName2.length == 0 &&
     grabGuess1.value == 0 && grabGuess2.value == 0) {
     resetbtn.disabled = true;
-  } else
+  } else 
     resetbtn.disabled = false;
 }
 
 function errorMessage() {
-	if (grabGuess1.value || grabGuess2.value > maxRange){ 
-	 document.querySelector('.error').classList.add('errorBorder')
-	} else {
-		document.querySelector('.error').classList.remove('errorBorder')
-	}  
+	alert('Out of range!');
 }
 
 function createNewCard() {
@@ -200,7 +196,3 @@ function createNewCard() {
           </div>
          </section>`
 	}
-
-
-
-

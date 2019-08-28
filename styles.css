@@ -204,14 +204,6 @@ button {
   margin-left: 41px;
 }
 
-.errorBorder{
-  border: 2px solid #DD1972;
-    /* border-radius: 7px; */
-    outline: none;
-    border-color: #DD1972;
-    box-shadow: 0 0 10px #DD1972;
-}
-
 .spanstyle {
   font-weight: bold;
   text-decoration: underline;
