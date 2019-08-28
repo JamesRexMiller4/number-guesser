@@ -39,7 +39,6 @@ button.addEventListener('click', function() {
 guessbtn.addEventListener('click', function() {
   changeName();
   changeGuess();
-  // determineWinner();
   guessHint();
   konamiCode();
 });
@@ -103,9 +102,9 @@ function changeGuess() {
 function resetGame() {
   document.getElementById('challenge1').reset();
   document.getElementById('challenge2').reset();
-  document.getElementById('rangeform').reset();
-  minSpan.innerText = "";
-  maxSpan.innerText = "";
+  // document.getElementById('rangeform').reset();
+  // minSpan.innerText = "";
+  // maxSpan.innerText = "";
 }
 
 // provides hint according to players guess
@@ -160,7 +159,7 @@ function resetButtonFunction() {
   for (i = 0; i < ele.length; i++) {
 
 	}
-	
+
   if (
     grabName1.length == 0 && grabName2.length == 0 &&
     grabGuess1.value == 0 && grabGuess2.value == 0) {
@@ -170,15 +169,15 @@ function resetButtonFunction() {
 }
 
 function errorMessage() {
-	if (grabGuess1.value || grabGuess2.value > maxRange){ 
+	if (grabGuess1.value || grabGuess2.value > maxRange){
 	 document.querySelector('.error').classList.add('errorBorder')
 	} else {
 		document.querySelector('.error').classList.remove('errorBorder')
-	}  
+	}
 }
 
 function createNewCard() {
-	newCard.innerHTML += 
+	newCard.innerHTML +=
       `<section class="winnercard sectionaside">
       <div class="backgroundcolordiv">
       <div class='cardheader'>
@@ -200,7 +199,3 @@ function createNewCard() {
           </div>
          </section>`
 	}
-
-
-
-
