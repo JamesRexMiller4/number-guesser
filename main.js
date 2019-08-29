@@ -29,6 +29,9 @@ var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
 var guesscount = 0;
 var timestart = 0;
+// var startingrandomint = 0;
+// var randomInt = startingrandomint;
+// var ele = document.getElementsByClassName('reset-function');
 
 // Displays range and grabs random integer
 button.addEventListener('click', function() {
@@ -49,18 +52,19 @@ guessbtn.addEventListener('click', function() {
 
 // grabs all forms and reverts back to original state
 resetbtn.addEventListener('click', function() {
-  document.getElementById('challenge1').reset();
-  document.getElementById('challenge2').reset();
+  resetGame();
   guesshint1.innerHTML = "";
   guesshint2.innerHTML = "";
   grabNameSpan1.innerHTML = "Challenger 1";
   grabNameSpan2.innerHTML = "Challenger 2";
   grabGuessP1.innerHTML = '?';
   grabGuessP2.innerHTML = '?';
-  getRandomInt();
-  resetGame();
   resetbtn.disabled = true;
   clearbtn.disabled = true;
+
+  if (minRange.value.length != 0 && maxRange.length != 0) {
+      getRandomInt();
+  } else startRandomInt();
 });
 
 // Clears players guesses
@@ -89,6 +93,14 @@ function getRandomInt() {
     changeToInt(minRange) + 1)) + changeToInt(minRange);
   console.log(randomInt);
 };
+
+function startRandomInt() {
+  randomInt = Math.floor(Math.random()* 100 + 1)
+  console.log(randomInt)
+}
+
+startRandomInt();
+
 // Display Name in Score Section
 function changeName() {
   var card1name = grabName1.value;
@@ -157,13 +169,16 @@ function timeKeeper() {
 }
 
 // Buttons should be disabled if there is not input
-function stoppedTyping() {
-  var clearGame = document.querySelector('#clear-game')
-  if ((grabGuess1.value.length > 0 || grabGuess2.value.length > 0)) {
-    clearGame.disabled = false;
-  } else {
-    clearGame.disabled = true;
-  }
+grabGuess1.onkeydown = function stoppedTyping() {
+  if (grabGuess1.value.length != 0 && grabGuess2.value.length != 0) {
+    clearbtn.disabled = false;
+  } else clearbtn.disabled = true;
+}
+
+grabGuess2.onkeydown = function stoppedTyping() {
+  if (grabGuess1.value.length != 0 && grabGuess2.value.length != 0) {
+    clearbtn.disabled = false;
+  } else clearbtn.disabled = true;
 }
 
 // Secret Button
@@ -179,13 +194,29 @@ function countGuess() {
   guesscount += 1;
 }
 
-function resetButtonFunction() {
-  var ele = document.getElementsByClassName('reset-function');
-  for (i = 0; i < ele.length; i++) {
-}
- (grabName1.length == 0 && grabName2.length == 0 && grabGuess1.value == 0 && grabGuess2.value == 0) ?
-    (resetbtn.disabled = true) : (resetbtn.disabled = false)
-}
+// Reset button disable enable functionality
+grabName1.onkeyup = function resetButtonFunction() {
+  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
+  	resetbtn.disabled = false
+  } else resetbtn.disabled = true
+};
+
+grabName2.onkeyup = function resetButtonFunction() {
+  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
+  	resetbtn.disabled = false
+  } else resetbtn.disabled = true
+};
+
+grabGuess1.onkeyup = function resetButtonFunction() {
+  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
+  	resetbtn.disabled = false
+  } else resetbtn.disabled = true
+};
+grabGuess2.onkeyup = function resetButtonFunction() {
+  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
+  	resetbtn.disabled = false
+  } else resetbtn.disabled = true
+};
 
 // displays new card on main right
 function createNewCard() {
@@ -218,7 +249,7 @@ function createNewCard() {
 	}
 
   function deleteCard(event) {
-  if (event.target.closest('button').classList.contains('delete'))
+  if (event.target.closest('#exitbtn').classList.contains('delete'))
     event.target.parentNode.parentNode.parentNode.remove();
 }
 

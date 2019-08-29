@@ -38,7 +38,7 @@
             </section>
           <section class="input-field spacing">
             <div class="backgroundcolordiv">
-              <p>The Current Range is <span id="min-span" class="spanstyle"></span> to <span class="spanstyle"id="max-span"></span></p>
+              <p>The Current Range is <span id="min-span" class="spanstyle">1</span> to <span class="spanstyle"id="max-span">100</span></p>
                 <h3>Challenger 1</h3>
                   <form id="challenge1">
                     <div class="challengediv">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" class="reset-function error" type="number" onkeyup="stoppedTyping(); resetButtonFunction()" autocomplete="off">
+                      <input id="player1guess" class="reset-function" type="number" autocomplete="off">
                     </div>
                   </form>
                   <div>
@@ -59,7 +59,7 @@
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>
-                        <input id="player2guess" class="reset-function" type="number" onkeyup="stoppedTyping(); resetButtonFunction()" autocomplete="off">
+                        <input id="player2guess" class="reset-function" type="number" autocomplete="off">
                       </div>
                     </form>
                   </div>
@@ -67,10 +67,10 @@
                     <button id="submit-guess" class="submitbtn">
                       SUBMIT GUESS
                     </button>
-                    <button id="reset-game" disabled>
+                    <button id="reset-game" disabled="disabled">
                       RESET GAME
                     </button>
-                    <button id="clear-game" disabled>
+                    <button id="clear-game" disabled="disabled">
                       CLEAR GAME
                     </button>
                   </div>
