@@ -43,7 +43,7 @@
                   <form id="challenge1">
                     <div class="challengediv">
                       <label>Name</label>
-                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()" autocomplete="off">
+                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)" autocomplete="off">
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
@@ -55,7 +55,7 @@
                     <form id="challenge2">
                       <div class="challengediv">
                         <label>Name</label>
-                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="resetButtonFunction()" autocomplete="off">
+                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)" autocomplete="off">
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>
