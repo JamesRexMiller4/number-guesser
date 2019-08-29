@@ -100,7 +100,6 @@ function startRandomInt() {
   randomInt = Math.floor(Math.random()* 100 + 1)
   console.log(randomInt)
 }
-
 startRandomInt();
 
 // Display Name in Score Section
