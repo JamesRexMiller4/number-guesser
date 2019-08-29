@@ -29,9 +29,6 @@ var card1guess = grabGuess1.value;
 var card2guess = grabGuess2.value;
 var guesscount = 0;
 var timestart = 0;
-// var startingrandomint = 0;
-// var randomInt = startingrandomint;
-// var ele = document.getElementsByClassName('reset-function');
 
 // Displays range and grabs random integer
 button.addEventListener('click', function() {
@@ -85,6 +82,10 @@ function changeToInt(inputField) {
 function displayRange() {
   minSpan.innerText = minRange.value;
   maxSpan.innerText = maxRange.value;
+  grabGuess1.min = minRange.value;
+  grabGuess2.min = minRange.value;
+  grabGuess1.max = maxRange.value;
+  grabGuess2.max = maxRange.value;
 };
 
 // generate random number
@@ -94,6 +95,7 @@ function getRandomInt() {
   console.log(randomInt);
 };
 
+// Create a starting random integer if update range is not used
 function startRandomInt() {
   randomInt = Math.floor(Math.random()* 100 + 1)
   console.log(randomInt)
@@ -153,7 +155,7 @@ function guessHint() {
 		createNewCard();
   } else return
 }
-
+// Easter Egg
 function konamiCode() {
   var card1guess = grabGuess1.value;
   var card2guess = grabGuess2.value;
@@ -161,7 +163,7 @@ function konamiCode() {
     alert("Don't Panic :) ")
   } else return
 }
-
+// Tracks time it took for winner to be selected
 function timeKeeper() {
   if (timestart != 0) {
     return
@@ -169,13 +171,7 @@ function timeKeeper() {
 }
 
 // Buttons should be disabled if there is not input
-grabGuess1.onkeydown = function stoppedTyping() {
-  if (grabGuess1.value.length != 0 && grabGuess2.value.length != 0) {
-    clearbtn.disabled = false;
-  } else clearbtn.disabled = true;
-}
-
-grabGuess2.onkeydown = function stoppedTyping() {
+function stoppedTyping() {
   if (grabGuess1.value.length != 0 && grabGuess2.value.length != 0) {
     clearbtn.disabled = false;
   } else clearbtn.disabled = true;
@@ -188,32 +184,15 @@ function favoriteColor() {
       console.log(`Wow, ${themostimportantquestion} is a cool color, thanks for sharing. Run forthosewhoseek() in the console.`)
     }
 }
-
 // tracks how many guess
 function countGuess() {
   guesscount += 1;
 }
 
 // Reset button disable enable functionality
-grabName1.onkeyup = function resetButtonFunction() {
-  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
-  	resetbtn.disabled = false
-  } else resetbtn.disabled = true
-};
-
-grabName2.onkeyup = function resetButtonFunction() {
-  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
-  	resetbtn.disabled = false
-  } else resetbtn.disabled = true
-};
-
-grabGuess1.onkeyup = function resetButtonFunction() {
-  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
-  	resetbtn.disabled = false
-  } else resetbtn.disabled = true
-};
-grabGuess2.onkeyup = function resetButtonFunction() {
-  if (grabName1.value.length != 0 || grabName2.value.length != 0 || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
+function resetButtonFunction() {
+  if (grabName1.value.length != 0 || grabName2.value.length != 0
+    || grabGuess1.value.length != 0 || grabGuess2.value.length != 0) {
   	resetbtn.disabled = false
   } else resetbtn.disabled = true
 };
@@ -252,8 +231,6 @@ function createNewCard() {
   if (event.target.closest('#exitbtn').classList.contains('delete'))
     event.target.parentNode.parentNode.parentNode.remove();
 }
-
-
 
   function forthosewhoseek() {
 

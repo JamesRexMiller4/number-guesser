@@ -7,7 +7,7 @@
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
   </head>
     <body>
-      <header>
+      <header role="header">
         <container class="header-container">
         <h1>NUMBER<span id="second-half-heading">GUESSER</span></h1>
           <section class="sub-header-section">
@@ -18,8 +18,8 @@
         </container>
       </header>
       <container id="game-container">
-        <main id="mainleft">
-          <article>
+        <main id="mainleft" role="main">
+          <article role="article">
             <section class="workingtitle spacing">
               <h3>Set Range</h3>
                 <form id="rangeform">
@@ -43,11 +43,11 @@
                   <form id="challenge1">
                     <div class="challengediv">
                       <label>Name</label>
-                      <input id="player1name" class="inchallenge reset-function" type="text" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)" autocomplete="off">
+                      <input id="player1name" class="inchallenge reset-function" type="text" onkeyup="resetButtonFunction()" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)" autocomplete="off">
                     </div>
                     <div class="players-guess">
                       <label>Guess</label>
-                      <input id="player1guess" class="reset-function" type="number" autocomplete="off">
+                      <input id="player1guess" class="reset-function" type="number" onkeyup="resetButtonFunction()" onkeydown="stoppedTyping()" autocomplete="off" min="1" max="100">
                     </div>
                   </form>
                   <div>
@@ -55,11 +55,11 @@
                     <form id="challenge2">
                       <div class="challengediv">
                         <label>Name</label>
-                        <input id="player2name" class="inchallenge reset-function" type="text" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)" autocomplete="off">
+                        <input id="player2name" class="inchallenge reset-function" type="text" onkeyup="resetButtonFunction()" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)" autocomplete="off">
                       </div>
                       <div class="players-guess">
                         <label>Guess</label>
-                        <input id="player2guess" class="reset-function" type="number" autocomplete="off">
+                        <input id="player2guess" class="reset-function" type="number" onkeyup="resetButtonFunction()" onkeydown="stoppedTyping()" autocomplete="off" min="1" max="100">
                       </div>
                     </form>
                   </div>
@@ -100,7 +100,7 @@
             </section>
           </article>
         </main>
-        <main id="mainright">
+        <main id="mainright" role="main">
           <button id="secret" onclick="favoriteColor()">?</button>
           <article class="cards">
           </article>
