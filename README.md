@@ -53,7 +53,7 @@ return parseInt(inputField.value);
 ```
 ---
 #### Original Comp
-![Original comp](./pictures/number-guesser-og-comp.png)
+![Original comp](./images/number-guesser-og-comp.png)
 
 #### Our Comp
-![our copy](.pictures/our_comp.png)
+![our copy](./images/our_comp.png)
